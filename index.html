@@ -1,0 +1,474 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <title>Lokesh Mamidi - Digital Portfolio</title>
+    <meta name="description" content="">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="robots" content="all,follow">
+    <!-- Bootstrap CSS-->
+    <link rel="stylesheet" href="vendor/bootstrap/css/bootstrap.min.css">
+    <!-- Font Awesome CSS-->
+    <link rel="stylesheet" href="vendor/font-awesome/css/font-awesome.min.css">
+    <!-- Google fonts - Roboto + Roboto Slab-->
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto+Slab:400,700%7CRoboto:400,700,300">
+    <!-- owl carousel-->
+    <link rel="stylesheet" href="vendor/owl.carousel/assets/owl.carousel.css">
+    <link rel="stylesheet" href="vendor/owl.carousel/assets/owl.theme.default.css">
+    <!-- animate.css-->
+    <link rel="stylesheet" href="vendor/animate.css/animate.css">
+    <!-- theme stylesheet-->
+    <link rel="stylesheet" href="css/style.blue.css" id="theme-stylesheet">
+    <!-- Custom stylesheet - for your changes-->
+    <link rel="stylesheet" href="css/custom.css">
+    <!-- Leaflet CSS - For the map-->
+
+    <!-- Animate.css -->
+    <link rel="stylesheet" href="css/animate.css"> 
+
+
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/leaflet/1.4.0/leaflet.css">
+    <!-- Favicon-->
+    <!-- Tweaks for older IEs--><!--[if lt IE 9]>
+        <script src="https://oss.maxcdn.com/html5shiv/3.7.3/html5shiv.min.js"></script>
+        <script src="https://oss.maxcdn.com/respond/1.4.2/respond.min.js"></script><![endif]-->
+  </head>
+  <body>
+    <!-- Reference item-->
+    <!-- navbar-->
+    <header class="header">
+      <nav class="navbar navbar-expand-lg fixed-top">
+        <div class="container"><a href="#intro" class="navbar-brand scrollTo">Mamidi Lokesh Venkata Sai</a>
+          <button type="button" data-toggle="collapse" data-target="#navbarcollapse" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation" class="navbar-toggler navbar-toggler-right"><span class="fa fa-bars"></span></button>
+          <div id="navbarcollapse" class="collapse navbar-collapse">
+            <ul class="navbar-nav ml-auto">
+              <li class="nav-item"><a href="#intro" class="nav-link link-scroll">Intro</a></li>
+              <li class="nav-item"><a href="#about" class="nav-link link-scroll">About</a></li>
+              <li class="nav-item"><a href="#education" class="nav-link link-scroll">education</a></li>
+              <li class="nav-item"><a href="#testimonials" class="nav-link link-scroll">Expertise</a></li>
+              <li class="nav-item"><a href="#references" class="nav-link link-scroll">Projects</a></li>
+              <li class="nav-item"><a href="#experience" class="nav-link link-scroll">Experience</a></li>
+              <li class="nav-item"><a href="#contact" class="nav-link link-scroll">Contact</a></li>
+              <li class="nav-item"><a href="Resume.pdf" target="_blank" class="nav-link link-scroll">Resume</a></li>
+              <li class="nav-item"><a href="#intro" class="nav-link link-scroll"><i class="fa fa-refresh fa-spin" style="font-size:22px"></i></a></li>
+            </ul>
+          </div>
+        </div>
+      </nav>
+    </header>
+    <!-- Intro Image-->
+    <section id="intro" style="background: url(img/home.jpg) center center no-repeat; background-size: cover;" class="intro-section pb-2">
+      <div class="container text-center">
+        <div data-animate="fadeInDown" class="logo"><img src="img/logo-big.png" alt="logo" width="130"></div>
+        <h1 data-animate="fadeInDown" class="text-shadow mb-5">Mamidi Lokesh Venkata Sai</h1>
+        <p data-animate="slideInUp" class="h3 text-shadow text-400">Computer Science Undergraduate at NIIT University. Specialised in Data Science.</p>
+      </div>
+    </section>
+    <!-- About-->
+    <section id="about" class="about-section">
+      <div class="container">
+        <header class="text-center">
+          <h2 data-animate="fadeInDown" class="title">About me</h2>
+        </header>
+        <div class="row">
+          <div data-animate="fadeInUp" class="col-lg-6">
+            <p>Computer Science student with a constant motivation to learn new things and seeking a challenging career in a progressive organization to enhance my knowledge, technical skills and to gain practical experience in the domain of data science.</p><br><br>
+            <p>Got my hands on computer for the first time on 14th July 2016. Ever since my journey with programming has been started. Initially I started out with C but never restricted myself to it. Algorithms and machine learning brought the coder out of me which became building blocks for my problem solving skills. Excluding my academia I have been involved in different projects. I like to mess around with stuff such as python, ML and others.</p>
+            
+          </div>
+
+          <!--<div data-animate="fadeInUp" class="col-sm-6 mx-auto "><img src="img/lokesh.jpg" alt="This is me - Data Scientist" class="image rounded-circle " width="320" height="300"></div>-->
+            <div data-animate="fadeInUp" class="col-sm-6 mx-auto "><img src="img/lokesh2.jpeg" alt="This is me - Data Scientist" class="image rounded-circle " width="320" height="300"></div>
+        </div>
+      </div>
+    </section>
+    <!-- Service-->
+    <section id="education" class="bg-gradient services-section">
+      <div class="container">
+        <header class="text-center">
+          <h2 data-animate="fadeInDown" class="title">Education</h2>
+        </header>
+        <div class="row services text-center">
+          <div data-animate="fadeInUp" class="col-lg-4">
+            <div class="icon"><i class="fa fa-graduation-cap"></i></div>
+              <!--<div class="icon"><img src="img/NUlogo.png" style="width:60px;height:60px"/></div>-->
+            <h3 class="heading mb-3 text-400">Bachelor of Technology</h3>
+            <p class="text-left description"><center>NIIT University<br>Batch 2016-2020<br>Neemrana, Rajasthan<br>Current CGPA: 8.68</center></p>
+          </div>
+          <div data-animate="fadeInUp" class="col-lg-4">
+            <div class="icon"><i class="fa fa-university"></i></div>
+            <h3 class="heading mb-3 text-400">Secondary Education in MPC</h3>
+            <p class="text-left description"><center>Master IIT Academy<br>Batch 2014-2016<br>Vijayawada, Andhra Pradesh<br>Percentage: 94.5%</center></p>
+          </div>
+          <div data-animate="fadeInUp" class="col-lg-4">
+            <div class="icon"><i class="fa fa-building"></i></div>
+            <h3 class="heading mb-3 text-400">Higher Education</h3>
+            <p class="text-left description"><center>Futurepath EM High School<br>Batch 2013-2014<br>Vijayawada, Andhra Pradesh<br>CGPA: 9.7</center></p>
+          </div>
+        </div>
+        <hr data-animate="fadeInUp">
+        <div data-animate="fadeInUp" class="text-center">
+          <p class="lead">Would you like to know more or just discuss something?</p>
+          <p><a href="#contact" class="btn btn-outline-light link-scroll">Contact me</a></p>
+        </div>
+      </div>
+    </section>
+    <!-- Testimonials-->
+    <section id="testimonials" class="testimonials-section bg-gray">
+      <div class="container">
+        <header class="text-center mb-2">
+          <h2 data-animate="fadeInUp" class="title">Expertise</h2>
+          <p data-animate="fadeInUp" class="lead">Here are some of my skills</p>
+        </header>
+        <ul data-animate="fadeInUp" class="owl-carousel owl-theme testimonials equalize-height">
+          <li class="item">
+            <div class="testimonial full-height">
+              <div class="text">
+                <img src="img/datascience.png" width="230px" height="230px" class="rounded img-fluid" alt="Cinque Terre">
+                  <br><h3 class="h4 reference-title"><center>Data Analysis</center></h3>
+                <p>Inputs raw data and outputs the analysis by re-organizing and modelling with a keen focus on Business Intelligence.</p>
+              </div>
+              
+            </div>
+          </li>
+          <li class="item">
+            <div class="testimonial full-height">
+              <div class="text">
+               <img src="img/watson.jpg" width="230px" height="230px" class="rounded img-fluid" alt="Cinque Terre">
+                  <br><h3 class="h4 reference-title"><center>IBM Watson Tools</center></h3>
+                <p>Watson Assistant, Watson Knowledge studio, Watson Compare and Comply Service, Watson Discovery</p>
+              </div>
+              
+            </div>
+          </li>
+          <li class="item">
+            <div class="testimonial full-height">
+              <div class="text">
+                <img src="img/ml.png" width="230px" height="250px" class="rounded img-fluid" alt="Cinque Terre">
+                  <br><h3 class="h4 reference-title"><center>Machine Learning & Deep Learning</center></h3>
+                <p>ML learn from the data, and make informed decisions based on what it has learned whereas, DL takes decisions on its own.</p>
+              </div>
+              
+            </div>
+          </li>
+          <li class="item">
+            <div class="testimonial full-height">
+              <div class="text">
+                <img src="img/web.png" width="230px" height="230px" class="rounded img-fluid" alt="Cinque Terre">
+                  <br><h3 class="h4 reference-title"><center>Coding</center></h3>
+                <p>C, Python, Data Structures, Java, Advance Java, Web Development (HTML, CSS, JS, Bootstrap)</p>
+              </div>
+              
+            </div>
+          </li>
+          <li class="item">
+            <div class="testimonial full-height">
+              <div class="text">
+               <img src="img/db.png" width="230px" height="230px" class="rounded img-fluid" alt="Cinque Terre">
+                  <br><h3 class="h4 reference-title"><center>Databse Management</center></h3>
+                <p>Tools: MySql, Google Firebase</p>
+              </div>
+              
+            </div>
+          </li>
+          <li class="item">
+            <div class="testimonial full-height">
+              <div class="text">
+               <img src="img/otherskills.png" width="230px" height="230px" class="rounded img-fluid" alt="Cinque Terre">
+                  <br><h3 class="h4 reference-title"><center>Other Skills</center></h3>
+                <p>Tools: Git, Jenkins, Docker</p>
+              </div>
+            </div>
+          </li>
+          <li class="item">
+            <div class="testimonial full-height">
+              <div class="text">
+               <img src="img/travel.png" width="230px" height="230px" class="rounded img-fluid" alt="Cinque Terre">
+                  <br><h3 class="h4 reference-title"><center>Interpersonal & Managing Skills</center></h3>
+                <p>Project + Good Presentation = Perfection;<br>Roles: SubLead in Fest, Mentor for Resonance programme in college</p>
+              </div>
+            </div>
+          </li>
+        </ul>
+      </div>
+    </section>
+    <!-- Statistics-->
+    <section id="statistics" data-dir="up" style="background: url(&quot;img/parallax.jpg&quot;);" class="statistics-section text-white parallax parallax">
+      <div class="container-fluid">
+        <div class="row showcase text-center"> 
+          <div data-animate="fadeInUp" class="col-lg-2 col-md-4">
+            <div class="item">
+              <div class="icon"><i class="fa fa-cogs"></i></div>
+              <h5 class="text-400 mt-4 text-uppercase"><span class="counter">11</span><br>Projects</h5>
+            </div>
+          </div>
+            <div data-animate="fadeInUp" class="col-lg-2 col-md-4">
+            <div class="item">
+              <div class="icon"><i class="fa fa-certificate"></i></div>
+              <h5 class="text-400 mt-4 text-uppercase"><span class="counter">7</span><br>Certifications</h5>
+            </div>
+          </div>
+          <div data-animate="fadeInUp" class="col-lg-2 col-md-4">
+            <div class="item">
+              <div class="icon"><i class="fa fa-file-text-o"></i></div>
+              <h5 class="text-400 mt-4 text-uppercase"><span class="counter">1</span><br>Publications</h5>
+            </div>
+          </div>
+          <div data-animate="fadeInUp" class="col-lg-2 col-md-4">
+            <div class="item">
+              <div class="icon"><i class="fa fa-motorcycle"></i></div>
+              <h5 class="text-400 mt-4 text-uppercase"><span class="counter">10</span><br>Trips</h5>
+            </div>
+          </div>
+          <div data-animate="fadeInUp" class="col-lg-2 col-md-4">
+            <div class="item">
+              <div class="icon"><i class="fa fa-desktop"></i></div>
+              <h5 class="text-400 mt-4 text-uppercase"><span class="counter">21</span><br>Skills</h5>
+            </div>
+          </div>
+          
+        </div>
+      </div>
+      <div class="dark-mask"></div>
+    </section>
+    <!--
+    *** REFERENCES IMAGE ***
+    _________________________________________________________
+    -->
+    <section id="references">
+      <div class="container">
+        <div class="col-sm-12">
+          <div class="mb-5 text-center">
+            <h2 data-animate="fadeInUp" class="title">Projects</h2>
+            <p data-animate="fadeInUp" class="lead">I have worked on couple of projects so I have picked only the latest for you.</p>
+          </div>
+          <ul id="filter" data-animate="fadeInUp">
+            <li class="active"><a href="#" data-filter="all">All</a></li>
+            <li><a href="#" data-filter="r_d">R&D</a></li>
+            <li><a href="#" data-filter="seo">Capstone</a></li>
+            <li><a href="#" data-filter="android">Android</a></li>
+              <li><a href="#" data-filter="dlc">DLC</a></li>
+            <li><a href="#" data-filter="other">Other</a></li>
+          </ul>
+          <div id="detail">
+            <div class="row">
+              <div class="col-lg-10 mx-auto"><span class="close">×</span>
+                <div id="detail-slider" class="owl-carousel owl-theme"></div>
+                <div class="text-center">
+                  <h1 id="detail-title" class="title"></h1>
+                </div>
+                <div id="detail-content"></div>
+              </div>
+            </div>
+          </div>
+          <!-- Reference detail-->
+          <div id="references-masonry" data-animate="fadeInUp">
+            <div class="row">
+                  <div data-category="r_d" class="reference-item col-lg-3 col-md-6">
+                    <div class="reference"><a href="#"><img src="img/shirt.jpg" alt="" class="img-fluid" width="400" height="300">
+                        <div class="overlay">
+                          <div class="inner">
+                            <h3 class="h4 reference-title">Image Processing and ML based model for Measuring Shirt Size</h3>
+                            
+                          </div>
+                        </div></a>
+                      <div data-images="img/shirt.jpg" class="sr-only reference-description">
+                          <P><CENTER>Jan 19 - April 19</CENTER></P>
+                        <p>Developed a Python application to measure size of shirt using the photo uploaded by a user using machine learning and Image processing. Using Predictive modeling made this project different from others, this lead us to Publishing a <a href="http://www.ijeat.org/download/volume-9-issue-2/">research paper</a> in IJEAT Journal on this project</p>
+                        <p class="buttons text-center"><a href="https://github.com/lokesh-venkata-sai/measurement_of_ShirtSize" target="_blank" class="btn btn-outline-primary"><i class="fa fa-globe"></i> VIEW</a></p>
+                      </div>
+                    </div>
+                  </div>
+                  <div data-category="seo" class="reference-item col-lg-3 col-md-6">
+                    <div class="reference"><a href="#"><img src="img/Movie.JPG" alt="" class="img-fluid">
+                        <div class="overlay">
+                          <div class="inner">
+                            <h3 class="h4 reference-title">Movie Recommendation Engine</h3>
+                            
+                          </div>
+                        </div></a>
+                      <div data-images="img/Movie.JPG" class="sr-only reference-description">
+                          <P><CENTER>Jan 19 - April 19</CENTER></P>
+                        <p>Developed a web application where movie buffs can find movies of their interest with our recommendation algorithm. </p>
+                        <p class="buttons text-center"><a href="https://github.com/lokesh-venkata-sai/MovieRecommendationEngine" target="_blank" class="btn btn-outline-primary"><i class="fa fa-globe"></i>VIEW</a></p>
+                      </div>
+                    </div>
+                  </div>
+                <div data-category="seo" class="reference-item col-lg-3 col-md-6">
+                    <div class="reference"><a href="#"><img src="img/churn1.png" alt="" class="img-fluid">
+                        <div class="overlay">
+                          <div class="inner">
+                            <h3 class="h4 reference-title">Employee Churn Prediction</h3>
+                            
+                          </div>
+                        </div></a>
+                      <div data-images="img/churn.png" class="sr-only reference-description">
+                          <P><CENTER>August 19 - Dec 19</CENTER></P>
+                        <p>Developed a Web Application for HR to see the Employee Churn and provided a form to be filled by the Employee to calculate the satisfaction level which is later used to predict Employee churn </p>
+                        <p class="buttons text-center"><a href="https://github.com/lokesh-venkata-sai/EmployeeChurn" target="_blank" class="btn btn-outline-primary"><i class="fa fa-globe"></i>VIEW</a></p>
+                      </div>
+                    </div>
+                  </div>
+                  <div data-category="android" class="reference-item col-lg-3 col-md-6">
+                    <div class="reference"><a href="#"><img src="img/logo1.png" alt="" class="img-fluid">
+                        <div class="overlay">
+                          <div class="inner">
+                            <h3 class="h4 reference-title">Bloodline <br> Connect with Donar</h3>
+                            
+                          </div>
+                        </div></a>
+                      <div data-images="img/bloodapp.png" class="sr-only reference-description">
+                          <P><CENTER>Jan 18 - May 18</CENTER></P>
+                        <p> platform to connect with people who wanted to donate blood. Can also search donars by city. Registered user can share their details if user himself want to donate blood. Developed Using Android Studio and Firebase</p>
+                        <p class="buttons text-center"><a href="https://github.com/lokesh-venkata-sai/Bloodline" target="_blank" class="btn btn-outline-primary"><i class="fa fa-globe"></i>VIEW</a></p>
+                      </div>
+                    </div>
+                  </div>
+                  
+              
+                  <div data-category="other" class="reference-item col-lg-3 col-md-6">
+                    <div class="reference"><a href="#"><img src="img/loan.jpg" alt="" class="img-fluid">
+                        <div class="overlay">
+                          <div class="inner">
+                            <h3 class="h4 reference-title">Likelihood estimate of customers on loan defaults</h3>
+                           
+                          </div>
+                        </div></a>
+                      <div data-images="img/loan.jpg" class="sr-only reference-description">
+                          <P><CENTER>Feb 19 to Mar 19</CENTER></P>
+                        <p>Predicted the likelihood of customers on the subscription of term deposits using variables like a phone conversation, job, marital status etc. </p>
+                        <!--<p class="buttons text-center"><a href="https://github.com/Software-Engineering-2018/Catero" target="_blank" class="btn btn-outline-primary"><i class="fa fa-globe"></i>VIEW</a></p>-->
+                      </div>
+                    </div>
+                  </div>
+
+                  <div data-category="other" class="reference-item col-lg-3 col-md-6">
+                    <div class="reference"><a href="#"><img src="img/asset.png" alt="" class="img-fluid">
+                        <div class="overlay">
+                          <div class="inner">
+                            <h3 class="h4 reference-title">Asset Management System</h3>
+                           
+                          </div>
+                        </div></a>
+                      <div data-images="img/asset.png" class="sr-only reference-description">
+                          <P><CENTER>Aug 18 to Dec 18 </CENTER></P>
+                        <p>An web application developed using Advanced Java which provides an admin to track all the activities of their assets using Unique ID.</p>
+                        <p class="buttons text-center"><a href="https://github.com/chythu03/Asset-Management-System" target="_blank" class="btn btn-outline-primary"><i class="fa fa-globe"></i>VIEW</a></p>
+                      </div>
+                    </div>
+                  </div>
+                  <div data-category="dlc" class="reference-item col-lg-3 col-md-6">
+                    <div class="reference"><a href="#"><img src="img/car.jpg" alt="" class="img-fluid">
+                        <div class="overlay">
+                          <div class="inner">
+                            <h3 class="h4 reference-title">Obstacle Avoiding car</h3>
+                           
+                          </div>
+                        </div></a>
+                      <div data-images="img/car.jpg" class="sr-only reference-description">
+                          <P><CENTER>Aug 17 to Dec 17 </CENTER></P>
+                        <p>I made a remote controlled car which avoids obstacles using Ultrasonic sensor and Bluetooth </p>
+                        <!--<p class="buttons text-center"><a href="https://github.com/chythu03/Asset-Management-System" target="_blank" class="btn btn-outline-primary"><i class="fa fa-globe"></i>VIEW</a></p>-->
+                      </div>
+                    </div>
+                  </div>
+                <div data-category="other" class="reference-item col-lg-3 col-md-6">
+                    <div class="reference"><a href="#"><img src="img/digit.png" alt="" class="img-fluid">
+                        <div class="overlay">
+                          <div class="inner">
+                            <h3 class="h4 reference-title">Hand Written Digit Recognition</h3>
+                           
+                          </div>
+                        </div></a>
+                      <div data-images="img/digit.png" class="sr-only reference-description">
+                          <P><CENTER>Jan 20 to Feb 20 </CENTER></P>
+                        <p>Developed a different DL Models to recognise the hand written digits. </p>
+                        <!--<p class="buttons text-center"><a href="https://github.com/chythu03/Asset-Management-System" target="_blank" class="btn btn-outline-primary"><i class="fa fa-globe"></i>VIEW</a></p>-->
+                      </div>
+                    </div>
+                  </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+    <!-- Customers-->
+    <section id="experience" class="bg-gradient services-section">
+      <div class="container">
+        <header class="text-center">
+          <h2 data-animate="fadeInDown" class="title">Experience</h2>
+        </header>
+        <div class="row services text-center">
+          <div data-animate="fadeInUp" class="col-lg-12">
+            <img src="img/ibm.png" width="280" height="110" class="rounded img-fluid" alt="Cinque Terre">
+            <h3 class="heading mb-3 text-400">Internship</h3>
+            <p class="text-left description"><center>Working as an intern in <b>IBM India Pvt Ltd., Banglore</b> starting from January and got hands-on experience with different problems in the field of Data Science, developed an Contract analysis tool and at present working on building chatbot on covid19</center></p>
+          </div>
+        </div>
+      </div>
+    </section>
+    <!-- Contact-->
+    <section id="contact" data-animate="bounceIn" class="contact-section contact">
+      <div class="container">
+        <header class="text-center">
+          <h2 class="title">Contact me</h2>
+        </header>
+
+        <div class="row">
+          <div class="col-lg-6 col-md-6 col-sm-6 col-xs-12"><br><p><iframe class="map" src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3825.0062960421315!2d80.6258552144822!3d16.525779788600385!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3a35eff73865144d%3A0xd2cc5f842fca754c!2sFuturepath%20E.%20M.%20High%20School!5e0!3m2!1sen!2sin!4v1589014421530!5m2!1sen!2sin" style="width:100%;height:400px;align-content: center" frameborder="0" style="border:0;" allowfullscreen="" aria-hidden="false" tabindex="0"></iframe></p> </div>
+          <div class="col-lg-6 col-md-6 col-sm-6 col-xs-12">
+            <div class="col-lg-8 mx-auto">
+              <form id="contact-form" method="post" action="">
+                <div class="messages"></div>
+                <div class="controls">
+                  <br><br><br><br><br>
+                  <div class="row">
+
+                    <div class="col-12">
+                        <center><i class="fa fa-mobile" style="font-size:39px"></i>&ensp; &nbsp;+91 9550768687 | 9660589582</center>
+                    </div><br>
+                    <div class="col-md-12">
+                        <center><i class="fa fa-envelope-o" style="font-size:36px"></i>&ensp; Mamidil.Sai@st.niituniversity.in </center>                 
+                    </div><br>
+                    <div class="col-md-12">
+                        <center><i class="fa fa-home" style="font-size:36px"></i>&ensp;Kedareswara Pet, Vijayawada, AP, 520003  </center>                
+                    </div>
+                  
+                  
+                  </div>
+                </div>
+              </form>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+    <!-- Map-->
+    
+    <footer class="main-footer">
+      <div class="container">
+        <div class="row">
+          <div class="col-lg-6 col-md-6 col-sm-6 col-xs-12 text-center text-lg-left">
+            <p class="social"><a href="https://www.facebook.com/lokesh.mamidi.92" class="external facebook wow fadeInUp"><i class="fa fa-facebook"></i></a><a href="https://www.instagram.com/mamidilokesh/" data-wow-delay="0.2s" class="external instagram wow fadeInUp"><i class="fa fa-instagram"></i></a><a href="https://github.com/lokesh-venkata-sai" data-wow-delay="0.4s" class="external gplus wow fadeInUp"><i class="fa fa-github"></i></a><a href="https://www.linkedin.com/in/lokesh-mamidi-8aa229130" data-wow-delay="0.6s" class="email wow fadeInUp"><i class="fa fa-linkedin"></i></a></p>
+          </div>
+          <!-- /.6-->
+          
+          <div class="col-lg-6 col-md-6 col-sm-6 col-xs-12">
+              <p class="template-bootstrapious">© Designed by <font font color="red"><b> Mamidi Lokesh </b> </font> - Student at NIIT University</p>
+            <!-- Please do not remove the backlink to us unless you support further theme's development at https://bootstrapious.com/donate. It is part of the license conditions. Thank you for understanding :)-->
+          </div>
+        </div>
+      </div>
+    </footer>
+    <!-- JavaScript files-->
+    <script src="vendor/jquery/jquery.min.js"></script>
+    <script src="vendor/bootstrap/js/bootstrap.bundle.min.js"></script>
+    <script src="vendor/jquery.cookie/jquery.cookie.js"> </script>
+    <script src="vendor/owl.carousel/owl.carousel.min.js"></script>
+    <script src="vendor/waypoints/lib/jquery.waypoints.min.js"></script>
+    <script src="vendor/jquery.counterup/jquery.counterup.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/leaflet/1.4.0/leaflet.js"> </script>
+    <script src="js/front.js"></script>
+  </body>
+</html>
