@@ -1,0 +1,57 @@
+body,h1,h2,h3,h4,h5,h6 {font-family: "Poppins", sans-serif}
+
+:root{
+    --p-c-brand: #2f70b7
+}
+
+body, html {
+  height: 100%;
+  line-height: 1.8;
+  font-family: "Poppins", sans-serif;
+}
+
+/* Full height image header */
+.bgimg-1 {
+  background-position: center;
+  background-size: cover;
+  background-image: url("../images/mac.jpg");
+  min-height: 100%;
+}
+
+.w3-bar .w3-button {
+  padding: 16px;
+}
+
+.nav-item{
+    padding-left: 10px;
+}
+
+.text-brand {
+    color: var(--p-c-brand);
+}
+
+#myphoto{
+    max-width: 250px; 
+    height: auto;
+}
+
+.skills-list{
+    padding-right: 1.5rem
+}
+
+.btn-outline-brand {
+    --bs-btn-color: var(--p-c-brand);
+    --bs-btn-border-color: var(--p-c-brand);
+    --bs-btn-hover-color: #fff;
+    --bs-btn-hover-bg: var(--p-c-brand);
+    --bs-btn-hover-border-color: var(--p-c-brand);
+    --bs-btn-focus-shadow-rgb: 47, 112, 183;
+    --bs-btn-active-color: #fff;
+    --bs-btn-active-bg: var(--p-c-brand);
+    --bs-btn-active-border-color: var(--p-c-brand);
+    --bs-btn-active-shadow: inset 0 3px 5px rgba(0, 0, 0, 0.125);
+    --bs-btn-disabled-color: var(--p-c-brand);
+    --bs-btn-disabled-bg: transparent;
+    --bs-btn-disabled-border-color: var(--p-c-brand);
+    --bs-gradient: none;
+}

@@ -1,474 +1,1073 @@
 <!DOCTYPE html>
-<html>
-  <head>
-    <meta charset="utf-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <title>Lokesh Mamidi - Digital Portfolio</title>
-    <meta name="description" content="">
-    <meta name="viewport" content="width=device-width, initial-scale=1">
-    <meta name="robots" content="all,follow">
-    <!-- Bootstrap CSS-->
-    <link rel="stylesheet" href="vendor/bootstrap/css/bootstrap.min.css">
-    <!-- Font Awesome CSS-->
-    <link rel="stylesheet" href="vendor/font-awesome/css/font-awesome.min.css">
-    <!-- Google fonts - Roboto + Roboto Slab-->
-    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto+Slab:400,700%7CRoboto:400,700,300">
-    <!-- owl carousel-->
-    <link rel="stylesheet" href="vendor/owl.carousel/assets/owl.carousel.css">
-    <link rel="stylesheet" href="vendor/owl.carousel/assets/owl.theme.default.css">
-    <!-- animate.css-->
-    <link rel="stylesheet" href="vendor/animate.css/animate.css">
-    <!-- theme stylesheet-->
-    <link rel="stylesheet" href="css/style.blue.css" id="theme-stylesheet">
-    <!-- Custom stylesheet - for your changes-->
-    <link rel="stylesheet" href="css/custom.css">
-    <!-- Leaflet CSS - For the map-->
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Lokesh</title>
+  <link rel="icon" href="./images/5.png" type="image/x-icon"/>
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet">
+  <!-- Bootstrap Icons link -->
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.10.3/font/bootstrap-icons.css">
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Raleway">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+  <link rel="stylesheet" href="./CSS/style.css">
+  <link rel="stylesheet" href="./CSS/bg.css">
+  <link rel="stylesheet" href="./CSS/exp_style.css">
+  <link rel="stylesheet" href="./CSS/skills_style.css">
+</head>
+<body>
 
-    <!-- Animate.css -->
-    <link rel="stylesheet" href="css/animate.css"> 
+<!-- Navbar (sit on top) -->
+<nav class="navbar navbar-expand-lg navbar-light bg-light fixed-top">
+  <div class="container-fluid">
+    <a class="navbar-brand" href="#home"><i class="fa fa-globe"></i> Home</a>
+    <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+      <span class="navbar-toggler-icon"></span>
+    </button>
 
+    <div class="collapse navbar-collapse" id="navbarSupportedContent">
+      <ul class="navbar-nav ms-auto mb-2 mb-lg-0">
+        <li class="nav-item">
+          <a class="nav-link" href="#about"><i class="fa fa-user"></i> About</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" href="#exp"><i class="fa fa-briefcase"></i> Experience</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" href="#projects"><i class="fa fa-file-code-o"></i> Projects</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" href="#skills"><i class="fa fa-cogs"></i> Skills</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" href="#footer"><i class="fa fa-envelope"></i> Contact</a>
+        </li>
+        <!-- <li class="nav-item">
+          <a class="nav-link" href="Resume.pdf" target="_blank"><i class="fa fa-file-pdf-o"></i> Resume</a>
+        </li> -->
+      </ul>
+    </div>
+  </div>
+</nav>
 
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/leaflet/1.4.0/leaflet.css">
-    <!-- Favicon-->
-    <!-- Tweaks for older IEs--><!--[if lt IE 9]>
-        <script src="https://oss.maxcdn.com/html5shiv/3.7.3/html5shiv.min.js"></script>
-        <script src="https://oss.maxcdn.com/respond/1.4.2/respond.min.js"></script><![endif]-->
-  </head>
-  <body>
-    <!-- Reference item-->
-    <!-- navbar-->
-    <header class="header">
-      <nav class="navbar navbar-expand-lg fixed-top">
-        <div class="container"><a href="#intro" class="navbar-brand scrollTo">Mamidi Lokesh Venkata Sai</a>
-          <button type="button" data-toggle="collapse" data-target="#navbarcollapse" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation" class="navbar-toggler navbar-toggler-right"><span class="fa fa-bars"></span></button>
-          <div id="navbarcollapse" class="collapse navbar-collapse">
-            <ul class="navbar-nav ml-auto">
-              <li class="nav-item"><a href="#intro" class="nav-link link-scroll">Intro</a></li>
-              <li class="nav-item"><a href="#about" class="nav-link link-scroll">About</a></li>
-              <li class="nav-item"><a href="#education" class="nav-link link-scroll">education</a></li>
-              <li class="nav-item"><a href="#testimonials" class="nav-link link-scroll">Expertise</a></li>
-              <li class="nav-item"><a href="#references" class="nav-link link-scroll">Projects</a></li>
-              <li class="nav-item"><a href="#experience" class="nav-link link-scroll">Experience</a></li>
-              <li class="nav-item"><a href="#contact" class="nav-link link-scroll">Contact</a></li>
-              <li class="nav-item"><a href="Resume.pdf" target="_blank" class="nav-link link-scroll">Resume</a></li>
-              <li class="nav-item"><a href="#intro" class="nav-link link-scroll"><i class="fa fa-refresh fa-spin" style="font-size:22px"></i></a></li>
-            </ul>
-          </div>
-        </div>
-      </nav>
-    </header>
-    <!-- Intro Image-->
-    <section id="intro" style="background: url(img/home.jpg) center center no-repeat; background-size: cover;" class="intro-section pb-2">
-      <div class="container text-center">
-        <div data-animate="fadeInDown" class="logo"><img src="img/logo-big.png" alt="logo" width="130"></div>
-        <h1 data-animate="fadeInDown" class="text-shadow mb-5">Mamidi Lokesh Venkata Sai</h1>
-        <p data-animate="slideInUp" class="h3 text-shadow text-400">Computer Science Undergraduate at NIIT University. Specialised in Data Science.</p>
-      </div>
-    </section>
-    <!-- About-->
-    <section id="about" class="about-section">
-      <div class="container">
-        <header class="text-center">
-          <h2 data-animate="fadeInDown" class="title">About me</h2>
-        </header>
-        <div class="row">
-          <div data-animate="fadeInUp" class="col-lg-6">
-            <p>Computer Science student with a constant motivation to learn new things and seeking a challenging career in a progressive organization to enhance my knowledge, technical skills and to gain practical experience in the domain of data science.</p><br><br>
-            <p>Got my hands on computer for the first time on 14th July 2016. Ever since my journey with programming has been started. Initially I started out with C but never restricted myself to it. Algorithms and machine learning brought the coder out of me which became building blocks for my problem solving skills. Excluding my academia I have been involved in different projects. I like to mess around with stuff such as python, ML and others.</p>
+<!-- Header with full-height image -->
+<header class="bgimg-1 d-flex justify-content-center align-items-center text-white" id="home">
+    <div class="row container"> 
+        <div class="container-fluid text-start">
+            <!-- <h1>Lokesh Venkata Sai Mamidi</h1><br> -->
+            <h3>Hi there 👋, my name is</h3>
+            <h1>Lokesh Venkata Sai Mamidi</h1>
+            <p class="lead">Data Scientist / Software Engineer<br>
             
-          </div>
+            <a href="https://github.com/lokesh-venkata-sai" class="text-light me-3"><i class="fa fa-github"></i></a>
+            <a href="https://www.linkedin.com/in/lokesh-mamidi-8aa229130" class="text-light me-3"><i class="fa fa-linkedin"></i></a>
+            <a href="mailto:lokeshmamidi252@gmail.com" class="text-light me-3"><i class="fa fa-envelope-o"></i></a>
 
-          <!--<div data-animate="fadeInUp" class="col-sm-6 mx-auto "><img src="img/lokesh.jpg" alt="This is me - Data Scientist" class="image rounded-circle " width="320" height="300"></div>-->
-            <div data-animate="fadeInUp" class="col-sm-6 mx-auto "><img src="img/lokesh2.jpeg" alt="This is me - Data Scientist" class="image rounded-circle " width="320" height="300"></div>
+            <p><a href="#about" class="btn btn-outline-light btn-lg">Learn more</a></p>
+        </div>
+    </div>
+</header>
+
+<!-- About Section -->
+<section class="py-5" id="about">
+  <div class="container">
+    <h3 class="text-center text-brand">ABOUT ME</h3>
+    <!-- <p class="text-center"><em>Data Science Enthusiast</em></p> -->
+    <div class="row">
+        <div class="col-md-2"></div>
+        <div class="col-md-4 text-center">
+            <p><strong><i class="fa fa-user me-2"></i>Lokesh Venkata Sai Mamidi</strong></p>
+            <img src="./images/1.jpg" class="img-fluid img-thumbnail" alt="Photo of Me" id="myphoto">
+        </div>
+        <div class="col-md-4">
+            <p></p><br>
+            <p>Graduate student at GMU studying computer science and looking for full time positions in 2024.
+            Ex-Data Scientist at IBM, during this tenure I worked on different projects like Contract Analysis, 
+            and chatbot and also worked on Big Data analytics using Python, and Pyspark by being part of the 
+            Mercedes Benz R&D department. Got the Best GBS Associate award which shows my dedicated and 
+            focused nature and my always-striving for betterment attitude. Passionate to work in an 
+            environment with a diverse background which challenges my ability in solving problems. 
+            I exhibit a positive attitude and am eager to adapt and learn in different environments.</p>
+        </div>
+      <div class="col-md-2"></div>
+    </div>
+  </div>
+</section>
+
+<!-- Experience Section -->
+<section id="exp">
+    <div class="container">
+        <h3 class="text-center text-brand">EXPERIENCE</h3>
+        <div class="main-timeline">
+            <div class="timeline">
+                <div class="icon"></div>
+                <div class="date-content">
+                    <div class="date-outer">
+                        <span class="date">
+                            <span class="duration">Jan 2023</span>
+                            <span class="duration">to</span>
+                            <span class="duration">Present</span>
+                            <!-- <span class="month">2 Years</span> -->
+                            <!-- <span class="year">2013</span> -->
+                        </span>
+                    </div>
+                </div>
+                <div class="timeline-content">
+                    <h5 class="title">Graduate Teaching Assistant</h5>
+                    <h6 class="company_name">George Mason University</h6>
+                    Fairfax, VA, USA
+                    <p class="description">
+                        Guided over 100 students through Data Mining and Database Management courses, significantly improving class performance 
+                        through detailed feedback and grading. Oversaw the completion of 30+ student projects, offering strategic guidance that 
+                        boosted project quality scores by 15%, demonstrating my commitment to enhancing educational outcomes and fostering student success.
+                    </p>
+                </div>
+            </div>
+            <div class="timeline">
+                <div class="icon"></div>
+                <div class="date-content">
+                    <div class="date-outer">
+                        <span class="date">
+                            <span class="duration">Sep 2020</span>
+                            <span class="duration">to</span>
+                            <span class="duration">Jun 2022</span>
+                            <!-- <span class="month">2 Years</span> -->
+                            <!-- <span class="year">2013</span> -->
+                        </span>
+                    </div>
+                </div>
+                <div class="timeline-content">
+                    <h5 class="title">Data Scientist / Software Engineer</h5>
+                    <h6 class="company_name">IBM</h6>
+                    Bangalore, India
+                    <p class="description">
+                        Excelled in developing the 'Autonomous Vehicle Sensor Data Analysis Toolbox' with over 40 applications for Mercedes Benz R&D India. 
+                        My work, which included seamless ETL processes using Apache Airflow, Python, and PySpark, enabled the 
+                        continuous analysis of terabytes of sensor data. Collaborating with cross-functional teams, transformed complex 
+                        validation use cases into scalable solutions, created interactive Tableau dashboards for key performance indicators, 
+                        and significantly enhanced system validation and efficiency, earning the "Best GBS Associate Award" for my contributions.
+                    </p>
+                </div>
+            </div>
+            <div class="timeline">
+                <div class="icon"></div>
+                <div class="date-content">
+                    <div class="date-outer">
+                        <span class="date">
+                            <span class="duration">Jan 2020</span>
+                            <span class="duration">to</span>
+                            <span class="duration">Jun 2020</span>
+                            <!-- <span class="month">2 Years</span> -->
+                            <!-- <span class="year">2013</span> -->
+                        </span>
+                    </div>
+                </div>
+                <div class="timeline-content">
+                    <h5 class="title">Data Scientist Intern</h5>
+                    <h6 class="company_name">IBM</h6>
+                    Bangalore, India
+                    <p class="description">
+                        Leveraged machine learning and deep learning models, including LSTM, to achieve a 95% accuracy rate in identifying 
+                        non-compliant clauses in legal contracts, significantly easing the legal team's workload. Additionally, I developed a 
+                        Watson Assistant chatbot hosted on IBM Cloud for ICMR, which provided crucial COVID-19 updates to over 5,000 staff, 
+                        enhancing safety compliance. My contribution also extended to deploying a real-time recommendation API, which personalized 
+                        user interactions, and introducing a chatbot performance report generator, streamlining evaluation processes.
+                    </p>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+
+<!-- Promo Section "Statistics" -->
+<section class="bg-dark text-light py-5">
+    <div class="container">
+      <div class="row text-center">
+        <div class="col-md-3">
+          <h2>15+</h2>
+          <p>Projects</p>
+        </div>
+        <div class="col-md-3">
+          <h2>15+</h2>
+          <p>Certifications</p>
+        </div>
+        <div class="col-md-3">
+          <h2>1</h2>
+          <p>Publications</p>
+        </div>
+        <div class="col-md-3">
+          <h2>30+</h2>
+          <p>Skills</p>
         </div>
       </div>
-    </section>
-    <!-- Service-->
-    <section id="education" class="bg-gradient services-section">
-      <div class="container">
-        <header class="text-center">
-          <h2 data-animate="fadeInDown" class="title">Education</h2>
-        </header>
-        <div class="row services text-center">
-          <div data-animate="fadeInUp" class="col-lg-4">
-            <div class="icon"><i class="fa fa-graduation-cap"></i></div>
-              <!--<div class="icon"><img src="img/NUlogo.png" style="width:60px;height:60px"/></div>-->
-            <h3 class="heading mb-3 text-400">Bachelor of Technology</h3>
-            <p class="text-left description"><center>NIIT University<br>Batch 2016-2020<br>Neemrana, Rajasthan<br>Current CGPA: 8.68</center></p>
-          </div>
-          <div data-animate="fadeInUp" class="col-lg-4">
-            <div class="icon"><i class="fa fa-university"></i></div>
-            <h3 class="heading mb-3 text-400">Senior Secondary Education in MPC</h3>
-            <p class="text-left description"><center>Master IIT Academy<br>Batch 2014-2016<br>Vijayawada, Andhra Pradesh<br>Percentage: 94.5%</center></p>
-          </div>
-          <div data-animate="fadeInUp" class="col-lg-4">
-            <div class="icon"><i class="fa fa-building"></i></div>
-            <h3 class="heading mb-3 text-400">Higher Education</h3>
-            <p class="text-left description"><center>Futurepath EM High School<br>Batch 2013-2014<br>Vijayawada, Andhra Pradesh<br>CGPA: 9.7</center></p>
-          </div>
-        </div>
-        <hr data-animate="fadeInUp">
-        <div data-animate="fadeInUp" class="text-center">
-          <p class="lead">Would you like to know more or just discuss something?</p>
-          <p><a href="#contact" class="btn btn-outline-light link-scroll">Contact me</a></p>
-        </div>
-      </div>
-    </section>
-    <!-- Testimonials-->
-    <section id="testimonials" class="testimonials-section bg-gray">
-      <div class="container">
-        <header class="text-center mb-2">
-          <h2 data-animate="fadeInUp" class="title">Expertise</h2>
-          <p data-animate="fadeInUp" class="lead">Here are some of my skills</p>
-        </header>
-        <ul data-animate="fadeInUp" class="owl-carousel owl-theme testimonials equalize-height">
-          <li class="item">
-            <div class="testimonial full-height">
-              <div class="text">
-                <img src="img/datascience.png" width="230px" height="230px" class="rounded img-fluid" alt="Cinque Terre">
-                  <br><h3 class="h4 reference-title"><center>Data Analysis</center></h3>
-                <p>Inputs raw data and outputs the analysis by re-organizing and modelling with a keen focus on Business Intelligence.</p>
-              </div>
-              
-            </div>
-          </li>
-          <li class="item">
-            <div class="testimonial full-height">
-              <div class="text">
-               <img src="img/watson.jpg" width="230px" height="230px" class="rounded img-fluid" alt="Cinque Terre">
-                  <br><h3 class="h4 reference-title"><center>IBM Watson Tools</center></h3>
-                <p>Watson Assistant, Watson Knowledge studio, Watson Compare and Comply Service, Watson Discovery</p>
-              </div>
-              
-            </div>
-          </li>
-          <li class="item">
-            <div class="testimonial full-height">
-              <div class="text">
-                <img src="img/ml.png" width="230px" height="250px" class="rounded img-fluid" alt="Cinque Terre">
-                  <br><h3 class="h4 reference-title"><center>Machine Learning & Deep Learning</center></h3>
-                <p>ML learn from the data, and make informed decisions based on what it has learned whereas, DL takes decisions on its own.</p>
-              </div>
-              
-            </div>
-          </li>
-          <li class="item">
-            <div class="testimonial full-height">
-              <div class="text">
-                <img src="img/web.png" width="230px" height="230px" class="rounded img-fluid" alt="Cinque Terre">
-                  <br><h3 class="h4 reference-title"><center>Coding</center></h3>
-                <p>C, Python, Data Structures, Java, Advance Java, Web Development (HTML, CSS, JS, Bootstrap)</p>
-              </div>
-              
-            </div>
-          </li>
-          <li class="item">
-            <div class="testimonial full-height">
-              <div class="text">
-               <img src="img/db.png" width="230px" height="230px" class="rounded img-fluid" alt="Cinque Terre">
-                  <br><h3 class="h4 reference-title"><center>Databse Management</center></h3>
-                <p>Tools: MySql, Google Firebase</p>
-              </div>
-              
-            </div>
-          </li>
-          <li class="item">
-            <div class="testimonial full-height">
-              <div class="text">
-               <img src="img/otherskills.png" width="230px" height="230px" class="rounded img-fluid" alt="Cinque Terre">
-                  <br><h3 class="h4 reference-title"><center>Other Skills</center></h3>
-                <p>Tools: Git, Jenkins, Docker</p>
-              </div>
-            </div>
-          </li>
-          <li class="item">
-            <div class="testimonial full-height">
-              <div class="text">
-               <img src="img/travel.png" width="230px" height="230px" class="rounded img-fluid" alt="Cinque Terre">
-                  <br><h3 class="h4 reference-title"><center>Interpersonal & Managing Skills</center></h3>
-                <p>Project + Good Presentation = Perfection;<br>Roles: SubLead in Fest, Mentor for Resonance programme in college</p>
-              </div>
-            </div>
-          </li>
+    </div>
+  </section>
+
+<!-- Projects Section -->
+<section class="py-5" id="projects">
+    <div class="container">
+        <h3 class="text-center text-brand">PROJECTS</h3>
+        <ul class="list-unstyled row g-3">
+            <li class="col-12 col-md-4">
+                <div class="card p-3 rounded border-0 shadow d-flex flex-column w-100 h-100 bg-body">
+                    <div class="d-flex justify-content-between align-items-center mb-3">
+                        <i class="bi bi-mortarboard fs-3 text-brand"></i>
+                        <div>
+                            <!-- <a href="" class="text-body opacity-100" target="_blank">
+                                <i class="bi bi-github fs-5"></i>
+                            </a> -->
+                        </div>
+                    </div>
+                    <div class="d-flex flex-column justify-content-between h-100">
+                        <h5 class="fw-normal mb-3">Used Car Price Prediction</h5>
+                        <div class="d-flex flex-md-row flex-column justify-content-between">
+                            <p class="fs-8 fw-light italic"><span class="me-2"><i class="bi bi-calendar4-range text-brand"></i></span>
+                                Aug 2023 - Dec 2023
+                            </p>
+                        </div>
+                        Spearheaded a comprehensive project for predicting used car prices using PySpark's MLlib, efficiently processing a 
+                        large and complex dataset, fine-tuned model performance achieving a 90% R2 coefficient
+                        <ul class="d-flex flex-wrap align-items-center text-brand">
+                            <li class="skills-list">Pyspark</li>
+                            <li class="skills-list">Machine Learning</li>
+                        </ul>
+                    </div>
+            </li>
+            <li class="col-12 col-md-4">
+                <div class="card p-3 rounded border-0 shadow d-flex flex-column w-100 h-100 bg-body">
+                    <div class="d-flex justify-content-between align-items-center mb-3">
+                        <i class="bi bi-mortarboard fs-3 text-brand"></i>
+                        <div>
+                            <a href="https://github.com/lokesh-venkata-sai/SWE645-a3" class="text-body opacity-100" target="_blank">
+                                <i class="bi bi-github fs-5"></i>
+                            </a>
+                        </div>
+                    </div>
+                    <div class="d-flex flex-column justify-content-between h-100">
+                        <h5 class="fw-normal mb-3">Student Feedback Microservices System</h5>
+                        <div class="d-flex flex-md-row flex-column justify-content-between">
+                            <p class="fs-8 fw-light italic"><span class="me-2"><i class="bi bi-calendar4-range text-brand"></i></span>
+                                Aug 2023 - Dec 2023
+                            </p>
+                        </div>
+                        Implemented full-stack web app with Java Spring Boot microservices, integrated with Amazon RDS/MySQL, 
+                        orchestrated Docker and Kubernetes deployment, and established CI/CD pipeline, reducing development time by 75%.
+                        <ul class="d-flex flex-wrap align-items-center text-brand">
+                            <li class="skills-list">Java Spring Boot</li>
+                            <li class="skills-list">Jenkins</li>
+                            <li class="skills-list">Docker</li>
+                            <li class="skills-list">AWS (S3, EC2, RDS)</li>
+                        </ul>
+                    </div>
+                </div>  
+            </li>
+            <li class="col-12 col-md-4">
+                <div class="card p-3 rounded border-0 shadow d-flex flex-column w-100 h-100 bg-body">
+                    <div class="d-flex justify-content-between align-items-center mb-3">
+                        <i class="bi bi-mortarboard fs-3 text-brand"></i>
+                        <div>
+                            <!-- <a href="" class="text-body opacity-100" target="_blank">
+                                <i class="bi bi-github fs-5"></i>
+                            </a> -->
+                        </div>
+                    </div>
+                    <div class="d-flex flex-column justify-content-between h-100">
+                        <h5 class="fw-normal mb-3">Credit Card Fraud Detection</h5>
+                        <div class="d-flex flex-md-row flex-column justify-content-between">
+                            <p class="fs-8 fw-light italic"><span class="me-2"><i class="bi bi-calendar4-range text-brand"></i></span>
+                                Jan 2023 - May 2023
+                            </p>
+                        </div>
+                        Led research project to prevent credit card fraud, improving model performance by 6% recall, 3% AUC score, and minimizing 
+                        losses through data balancing techniques like SMOTE, TomekLinks and iterative experimentation.
+                        <ul class="d-flex flex-wrap align-items-center text-brand">
+                            <li class="skills-list">Machine Learning</li>
+                            <li class="skills-list">Data Balancing</li>
+                            <li class="skills-list">Python</li>
+                        </ul>
+                    </div>
+                </div> 
+            </li>
         </ul>
-      </div>
-    </section>
-    <!-- Statistics-->
-    <section id="statistics" data-dir="up" style="background: url(&quot;img/parallax.jpg&quot;);" class="statistics-section text-white parallax parallax">
-      <div class="container-fluid">
-        <div class="row showcase text-center"> 
-          <div data-animate="fadeInUp" class="col-lg-2 col-md-4">
-            <div class="item">
-              <div class="icon"><i class="fa fa-cogs"></i></div>
-              <h5 class="text-400 mt-4 text-uppercase"><span class="counter">11</span><br>Projects</h5>
+        <ul class="list-unstyled row g-3 collapse projects-collapsable">
+            <li class="col-12 col-md-4">
+                <div class="card p-3 rounded border-0 shadow d-flex flex-column w-100 h-100 bg-body">
+                    <div class="d-flex justify-content-between align-items-center mb-3">
+                        <i class="bi bi-mortarboard fs-3 text-brand"></i>
+                        <div>
+                            <!-- <a href="" class="text-body opacity-100" target="_blank">
+                                <i class="bi bi-github fs-5"></i>
+                            </a> -->
+                        </div>
+                    </div>
+                    <div class="d-flex flex-column justify-content-between h-100">
+                        <h5 class="fw-normal mb-3">Hand Written Digit Recognition</h5>
+                        <div class="d-flex flex-md-row flex-column justify-content-between">
+                            <p class="fs-8 fw-light italic"><span class="me-2"><i class="bi bi-calendar4-range text-brand"></i></span>
+                                Jan 2020 - Feb 2020
+                            </p>
+                        </div>
+                        Developed multiple Deep Learning models for hand-written digit recognition. Through rigorous experimentation and optimization, 
+                        this project aimed to achieve high accuracy in digit classification tasks, showcasing the power of Deep Learning in pattern 
+                        recognition and image processing.
+                        <ul class="d-flex flex-wrap align-items-center text-brand">
+                            <li class="skills-list">Neural Networks</li>
+                            <li class="skills-list">Tensorflow</li>
+                            <li class="skills-list">Machine Learning</li>
+                        </ul>
+                    </div>
+            </li>
+            <li class="col-12 col-md-4">
+                <div class="card p-3 rounded border-0 shadow d-flex flex-column w-100 h-100 bg-body">
+                    <div class="d-flex justify-content-between align-items-center mb-3">
+                        <i class="bi bi-mortarboard fs-3 text-brand"></i>
+                        <div>
+                            <a href="https://www.futurepathschools.co.in/" class="text-body opacity-100" target="_blank">
+                                <i class="bi bi-browser-chrome fs-5"></i>
+                            </a>
+                        </div>
+                    </div>
+                    <div class="d-flex flex-column justify-content-between h-100">
+                        <h5 class="fw-normal mb-3">School Website</h5>
+                        <div class="d-flex flex-md-row flex-column justify-content-between">
+                            <p class="fs-8 fw-light italic"><span class="me-2"><i class="bi bi-calendar4-range text-brand"></i></span>
+                                Jan 2020 - Mar 2020
+                            </p>
+                        </div>
+                        created an interactive school website using Bootstrap, CSS, and JavaScript. Optimized photo upload reduced page 
+                        load time by 70%. Implemented Flask for user and admin interfaces, resulting in a 50% decrease in content update time.
+                        <ul class="d-flex flex-wrap align-items-center text-brand">
+                            <li class="skills-list">Python Flask</li>
+                            <li class="skills-list">HTML, CSS, Bootstrap</li>
+                        </ul>
+                    </div>
+            </li>
+            <li class="col-12 col-md-4">
+                <div class="card p-3 rounded border-0 shadow d-flex flex-column w-100 h-100 bg-body">
+                    <div class="d-flex justify-content-between align-items-center mb-3">
+                        <i class="bi bi-mortarboard fs-3 text-brand"></i>
+                        <div>
+                            <a href="https://github.com/lokesh-venkata-sai/EmployeeChurn" class="text-body opacity-100" target="_blank">
+                                <i class="bi bi-github fs-5"></i>
+                            </a>
+                        </div>
+                    </div>
+                    <div class="d-flex flex-column justify-content-between h-100">
+                        <h5 class="fw-normal mb-3">Employee Churn Prediction</h5>
+                        <div class="d-flex flex-md-row flex-column justify-content-between">
+                            <p class="fs-8 fw-light italic"><span class="me-2"><i class="bi bi-calendar4-range text-brand"></i></span>
+                                Aug 2019 - Dec 2019
+                            </p>
+                        </div>
+                        Developed a web application for HR to estimate employee churn and assess satisfaction levels through a survey. 
+                        Achieved a predictive churn accuracy of 97% using PyCharts, Flask, and Machine Learning techniques
+                        <ul class="d-flex flex-wrap align-items-center text-brand">
+                            <li class="skills-list">Python Flask</li>
+                            <li class="skills-list">Machine Learning</li>
+                            <li class="skills-list">PyCharts</li>
+                        </ul>
+                    </div>
+            </li>
+            <li class="col-12 col-md-4">
+                <div class="card p-3 rounded border-0 shadow d-flex flex-column w-100 h-100 bg-body">
+                    <div class="d-flex justify-content-between align-items-center mb-3">
+                        <i class="bi bi-mortarboard fs-3 text-brand"></i>
+                        <div>
+                            <a href="https://github.com/lokesh-venkata-sai/MovieRecommendationEngine" class="text-body opacity-100" target="_blank">
+                                <i class="bi bi-github fs-5"></i>
+                            </a>
+                        </div>
+                    </div>
+                    <div class="d-flex flex-column justify-content-between h-100">
+                        <h5 class="fw-normal mb-3">Movie Recommendation Engine</h5>
+                        <div class="d-flex flex-md-row flex-column justify-content-between">
+                            <p class="fs-8 fw-light italic"><span class="me-2"><i class="bi bi-calendar4-range text-brand"></i></span>
+                                Jan 2019 - Apr 2019
+                            </p>
+                        </div>
+                        Created a user-friendly web app with Python Flask and MVC architecture, providing personalized movie recommendations 
+                        based on user behavior. Implemented ML algorithms like collaborative filtering for accuracy enhancement.
+                        <ul class="d-flex flex-wrap align-items-center text-brand">
+                            <li class="skills-list">Python</li>
+                            <li class="skills-list">Machine Learning</li>
+                            <li class="skills-list">MySQL</li>
+                            <li class="skills-list">HTML, CSS, Bootstrap</li>
+                            <li class="skills-list">Jinja</li>
+                        </ul>
+                    </div>
+            </li>
+            <li class="col-12 col-md-4">
+                <div class="card p-3 rounded border-0 shadow d-flex flex-column w-100 h-100 bg-body">
+                    <div class="d-flex justify-content-between align-items-center mb-3">
+                        <i class="bi bi-mortarboard fs-3 text-brand"></i>
+                        <div>
+                            <a href="https://github.com/lokesh-venkata-sai/measurement_of_ShirtSize" class="text-body opacity-100" target="_blank">
+                                <i class="bi bi-github fs-5"></i>
+                            </a>
+                        </div>
+                    </div>
+                    <div class="d-flex flex-column justify-content-between h-100">
+                        <h5 class="fw-normal mb-3">Measurement of shirt size - Image Processing</h5>
+                        <div class="d-flex flex-md-row flex-column justify-content-between">
+                            <p class="fs-8 fw-light italic"><span class="me-2"><i class="bi bi-calendar4-range text-brand"></i></span>
+                                Jan 2019 - Apr 2019
+                            </p>
+                        </div>
+                        Led a team of four to develop a Python application predicting shirt sizes with 85% accuracy from uploaded photos. 
+                        Published a research paper on the project in the IJEAT Journal 2019. Acquired expertise in image processing and predictive analysis.
+                        <ul class="d-flex flex-wrap align-items-center text-brand">
+                            <li class="skills-list">Python</li>
+                            <li class="skills-list">Image Processing</li>
+                        </ul>
+                    </div>
+            </li>
+            <li class="col-12 col-md-4">
+                <div class="card p-3 rounded border-0 shadow d-flex flex-column w-100 h-100 bg-body">
+                    <div class="d-flex justify-content-between align-items-center mb-3">
+                        <i class="bi bi-mortarboard fs-3 text-brand"></i>
+                        <div>
+                            <a href="" class="text-body opacity-100" target="_blank">
+                                <i class="bi bi-github fs-5"></i>
+                            </a>
+                        </div>
+                    </div>
+                    <div class="d-flex flex-column justify-content-between h-100">
+                        <h5 class="fw-normal mb-3">Loan Default Prediction</h5>
+                        <div class="d-flex flex-md-row flex-column justify-content-between">
+                            <!-- <p class="fs-8 fw-light italic"><span class="me-2"><i class="bi bi-calendar4-range text-brand"></i></span>
+                                Feb 2019 - Mar 2019
+                            </p> -->
+                        </div>
+                        Analyzed customer data to predict the likelihood of subscription to term deposits. Utilized variables such as phone 
+                        conversation, job, marital status, etc., employing predictive modeling techniques on real-life scenarios.
+                        <ul class="d-flex flex-wrap align-items-center text-brand">
+                            <li class="skills-list">Python</li>
+                            <li class="skills-list">Machine Learning</li>
+                        </ul>
+                    </div>
+            </li>
+            <li class="col-12 col-md-4">
+                <div class="card p-3 rounded border-0 shadow d-flex flex-column w-100 h-100 bg-body">
+                    <div class="d-flex justify-content-between align-items-center mb-3">
+                        <i class="bi bi-mortarboard fs-3 text-brand"></i>
+                        <div>
+                            <a href="https://github.com/chythu03/Asset-Management-System" class="text-body opacity-100" target="_blank">
+                                <i class="bi bi-github fs-5"></i>
+                            </a>
+                        </div>
+                    </div>
+                    <div class="d-flex flex-column justify-content-between h-100">
+                        <h5 class="fw-normal mb-3">Asset Management System</h5>
+                        <div class="d-flex flex-md-row flex-column justify-content-between">
+                            <p class="fs-8 fw-light italic"><span class="me-2"><i class="bi bi-calendar4-range text-brand"></i></span>
+                                Aug 2018 - Dec 2018
+                            </p>
+                        </div>
+                        Created a Java servlet-based web app to streamline asset tracking and management for administrators handling over 1000 assets. 
+                        Developed proficiency in MySQL and Java programming, enhancing database management skills.
+                        <ul class="d-flex flex-wrap align-items-center text-brand">
+                            <li class="skills-list">Java</li>
+                            <li class="skills-list">MySQL</li>
+                            <li class="skills-list">HTML, CSS</li>
+                        </ul>
+                    </div>
+            </li>
+            <li class="col-12 col-md-4">
+                <div class="card p-3 rounded border-0 shadow d-flex flex-column w-100 h-100 bg-body">
+                    <div class="d-flex justify-content-between align-items-center mb-3">
+                        <i class="bi bi-mortarboard fs-3 text-brand"></i>
+                        <div>
+                            <a href="https://github.com/lokesh-venkata-sai/Bloodline" class="text-body opacity-100" target="_blank">
+                                <i class="bi bi-github fs-5"></i>
+                            </a>
+                        </div>
+                    </div>
+                    <div class="d-flex flex-column justify-content-between h-100">
+                        <h5 class="fw-normal mb-3">Bloodline</h5>
+                        <div class="d-flex flex-md-row flex-column justify-content-between">
+                            <p class="fs-8 fw-light italic"><span class="me-2"><i class="bi bi-calendar4-range text-brand"></i></span>
+                                Jan 2018 - May 2018
+                            </p>
+                        </div>
+                        Crafted an Android application enabling users to locate Blood Donors in their vicinity, utilizing Firebase database for 
+                        efficient data storage and retrieval. This project provided a comprehensive overview of Android Development, fostering 
+                        valuable learning experiences in mobile app creation 
+                        <ul class="d-flex flex-wrap align-items-center text-brand">
+                            <li class="skills-list">Java</li>
+                            <li class="skills-list">Android App Development</li>
+                            <li class="skills-list">Firebase</li>
+                        </ul>
+                    </div>
+            </li>
+            <li class="col-12 col-md-4">
+                <div class="card p-3 rounded border-0 shadow d-flex flex-column w-100 h-100 bg-body">
+                    <div class="d-flex justify-content-between align-items-center mb-3">
+                        <i class="bi bi-mortarboard fs-3 text-brand"></i>
+                        <div>
+                            <!-- <a href="" class="text-body opacity-100" target="_blank">
+                                <i class="bi bi-github fs-5"></i>
+                            </a> -->
+                        </div>
+                    </div>
+                    <div class="d-flex flex-column justify-content-between h-100">
+                        <h5 class="fw-normal mb-3">Obstacle Avoiding Car</h5>
+                        <div class="d-flex flex-md-row flex-column justify-content-between">
+                            <p class="fs-8 fw-light italic"><span class="me-2"><i class="bi bi-calendar4-range text-brand"></i></span>
+                                Aug 2017 - Dec 2017
+                            </p>
+                        </div>
+                        Created a remote-controlled car with obstacle avoidance using an Ultrasonic sensor, Arduino, and Bluetooth module. 
+                        The car autonomously navigates, demonstrating practical application of sensor technology in robotics. 
+                        <ul class="d-flex flex-wrap align-items-center text-brand">
+                            <li class="skills-list">Aurdino</li>
+                            <li class="skills-list">Digital Logic Circuits</li>
+                        </ul>
+                    </div>
+            </li>            
+        </ul>
+        <!-- View more / View less toggle button -->
+        <div class="collaspe-btn-container rounded">
+            <div class="w-100 d-flex justify-content-center align-items-end pb-6">
+                <button type="button" data-bs-toggle="collapse" data-bs-target=".projects-collapsable"
+                    aria-expanded="false" aria-controls="projects-collapsable" id="toggle-more"
+                    class="btn btn-outline-brand btn-sm mt-4">
+                    <span>View more</span>&nbsp;<i class="bi bi-caret-down"></i>
+                </button>
             </div>
-          </div>
-            <div data-animate="fadeInUp" class="col-lg-2 col-md-4">
-            <div class="item">
-              <div class="icon"><i class="fa fa-certificate"></i></div>
-              <h5 class="text-400 mt-4 text-uppercase"><span class="counter">7</span><br>Certifications</h5>
-            </div>
-          </div>
-          <div data-animate="fadeInUp" class="col-lg-2 col-md-4">
-            <div class="item">
-              <div class="icon"><i class="fa fa-file-text-o"></i></div>
-              <h5 class="text-400 mt-4 text-uppercase"><span class="counter">1</span><br>Publications</h5>
-            </div>
-          </div>
-          <div data-animate="fadeInUp" class="col-lg-2 col-md-4">
-            <div class="item">
-              <div class="icon"><i class="fa fa-motorcycle"></i></div>
-              <h5 class="text-400 mt-4 text-uppercase"><span class="counter">10</span><br>Trips</h5>
-            </div>
-          </div>
-          <div data-animate="fadeInUp" class="col-lg-2 col-md-4">
-            <div class="item">
-              <div class="icon"><i class="fa fa-desktop"></i></div>
-              <h5 class="text-400 mt-4 text-uppercase"><span class="counter">21</span><br>Skills</h5>
-            </div>
-          </div>
-          
         </div>
-      </div>
-      <div class="dark-mask"></div>
-    </section>
-    <!--
-    *** REFERENCES IMAGE ***
-    _________________________________________________________
-    -->
-    <section id="references">
-      <div class="container">
-        <div class="col-sm-12">
-          <div class="mb-5 text-center">
-            <h2 data-animate="fadeInUp" class="title">Projects</h2>
-            <p data-animate="fadeInUp" class="lead">I have worked on couple of projects so I have picked only the latest for you.</p>
-          </div>
-          <ul id="filter" data-animate="fadeInUp">
-            <li class="active"><a href="#" data-filter="all">All</a></li>
-            <li><a href="#" data-filter="r_d">R&D</a></li>
-            <li><a href="#" data-filter="seo">Capstone</a></li>
-            <li><a href="#" data-filter="android">Android</a></li>
-              <li><a href="#" data-filter="dlc">DLC</a></li>
-            <li><a href="#" data-filter="other">Other</a></li>
-          </ul>
-          <div id="detail">
-            <div class="row">
-              <div class="col-lg-10 mx-auto"><span class="close">×</span>
-                <div id="detail-slider" class="owl-carousel owl-theme"></div>
-                <div class="text-center">
-                  <h1 id="detail-title" class="title"></h1>
-                </div>
-                <div id="detail-content"></div>
-              </div>
-            </div>
-          </div>
-          <!-- Reference detail-->
-          <div id="references-masonry" data-animate="fadeInUp">
-            <div class="row">
-                  <div data-category="r_d" class="reference-item col-lg-3 col-md-6">
-                    <div class="reference"><a href="#"><img src="img/shirt.jpg" alt="" class="img-fluid" width="400" height="300">
-                        <div class="overlay">
-                          <div class="inner">
-                            <h3 class="h4 reference-title">Image Processing and ML based model for Measuring Shirt Size</h3>
-                            
-                          </div>
-                        </div></a>
-                      <div data-images="img/shirt.jpg" class="sr-only reference-description">
-                          <P><CENTER>Jan 19 - April 19</CENTER></P>
-                        <p>Developed a Python application to measure size of shirt using the photo uploaded by a user using machine learning and Image processing. Using Predictive modeling made this project different from others, this lead us to Publishing a <a href="http://www.ijeat.org/download/volume-9-issue-2/">research paper</a> in IJEAT Journal on this project</p>
-                        <p class="buttons text-center"><a href="https://github.com/lokesh-venkata-sai/measurement_of_ShirtSize" target="_blank" class="btn btn-outline-primary"><i class="fa fa-globe"></i> VIEW</a></p>
-                      </div>
-                    </div>
-                  </div>
-                  <div data-category="seo" class="reference-item col-lg-3 col-md-6">
-                    <div class="reference"><a href="#"><img src="img/Movie.JPG" alt="" class="img-fluid">
-                        <div class="overlay">
-                          <div class="inner">
-                            <h3 class="h4 reference-title">Movie Recommendation Engine</h3>
-                            
-                          </div>
-                        </div></a>
-                      <div data-images="img/Movie.JPG" class="sr-only reference-description">
-                          <P><CENTER>Jan 19 - April 19</CENTER></P>
-                        <p>Developed a web application where movie buffs can find movies of their interest with our recommendation algorithm. </p>
-                        <p class="buttons text-center"><a href="https://github.com/lokesh-venkata-sai/MovieRecommendationEngine" target="_blank" class="btn btn-outline-primary"><i class="fa fa-globe"></i>VIEW</a></p>
-                      </div>
-                    </div>
-                  </div>
-                <div data-category="seo" class="reference-item col-lg-3 col-md-6">
-                    <div class="reference"><a href="#"><img src="img/churn1.png" alt="" class="img-fluid">
-                        <div class="overlay">
-                          <div class="inner">
-                            <h3 class="h4 reference-title">Employee Churn Prediction</h3>
-                            
-                          </div>
-                        </div></a>
-                      <div data-images="img/churn.png" class="sr-only reference-description">
-                          <P><CENTER>August 19 - Dec 19</CENTER></P>
-                        <p>Developed a Web Application for HR to see the Employee Churn and provided a form to be filled by the Employee to calculate the satisfaction level which is later used to predict Employee churn </p>
-                        <p class="buttons text-center"><a href="https://github.com/lokesh-venkata-sai/EmployeeChurn" target="_blank" class="btn btn-outline-primary"><i class="fa fa-globe"></i>VIEW</a></p>
-                      </div>
-                    </div>
-                  </div>
-                  <div data-category="android" class="reference-item col-lg-3 col-md-6">
-                    <div class="reference"><a href="#"><img src="img/logo1.png" alt="" class="img-fluid">
-                        <div class="overlay">
-                          <div class="inner">
-                            <h3 class="h4 reference-title">Bloodline <br> Connect with Donar</h3>
-                            
-                          </div>
-                        </div></a>
-                      <div data-images="img/bloodapp.png" class="sr-only reference-description">
-                          <P><CENTER>Jan 18 - May 18</CENTER></P>
-                        <p> platform to connect with people who wanted to donate blood. Can also search donars by city. Registered user can share their details if user himself want to donate blood. Developed Using Android Studio and Firebase</p>
-                        <p class="buttons text-center"><a href="https://github.com/lokesh-venkata-sai/Bloodline" target="_blank" class="btn btn-outline-primary"><i class="fa fa-globe"></i>VIEW</a></p>
-                      </div>
-                    </div>
-                  </div>
-                  
-              
-                  <div data-category="other" class="reference-item col-lg-3 col-md-6">
-                    <div class="reference"><a href="#"><img src="img/loan.jpg" alt="" class="img-fluid">
-                        <div class="overlay">
-                          <div class="inner">
-                            <h3 class="h4 reference-title">Likelihood estimate of customers on loan defaults</h3>
-                           
-                          </div>
-                        </div></a>
-                      <div data-images="img/loan.jpg" class="sr-only reference-description">
-                          <P><CENTER>Feb 19 to Mar 19</CENTER></P>
-                        <p>Predicted the likelihood of customers on the subscription of term deposits using variables like a phone conversation, job, marital status etc. </p>
-                        <!--<p class="buttons text-center"><a href="https://github.com/Software-Engineering-2018/Catero" target="_blank" class="btn btn-outline-primary"><i class="fa fa-globe"></i>VIEW</a></p>-->
-                      </div>
-                    </div>
-                  </div>
+    </div>
+  </section>
 
-                  <div data-category="other" class="reference-item col-lg-3 col-md-6">
-                    <div class="reference"><a href="#"><img src="img/asset.png" alt="" class="img-fluid">
-                        <div class="overlay">
-                          <div class="inner">
-                            <h3 class="h4 reference-title">Asset Management System</h3>
-                           
-                          </div>
-                        </div></a>
-                      <div data-images="img/asset.png" class="sr-only reference-description">
-                          <P><CENTER>Aug 18 to Dec 18 </CENTER></P>
-                        <p>An web application developed using Advanced Java which provides an admin to track all the activities of their assets using Unique ID.</p>
-                        <p class="buttons text-center"><a href="https://github.com/chythu03/Asset-Management-System" target="_blank" class="btn btn-outline-primary"><i class="fa fa-globe"></i>VIEW</a></p>
-                      </div>
-                    </div>
-                  </div>
-                  <div data-category="dlc" class="reference-item col-lg-3 col-md-6">
-                    <div class="reference"><a href="#"><img src="img/car.jpg" alt="" class="img-fluid">
-                        <div class="overlay">
-                          <div class="inner">
-                            <h3 class="h4 reference-title">Obstacle Avoiding car</h3>
-                           
-                          </div>
-                        </div></a>
-                      <div data-images="img/car.jpg" class="sr-only reference-description">
-                          <P><CENTER>Aug 17 to Dec 17 </CENTER></P>
-                        <p>I made a remote controlled car which avoids obstacles using Ultrasonic sensor and Bluetooth </p>
-                        <!--<p class="buttons text-center"><a href="https://github.com/chythu03/Asset-Management-System" target="_blank" class="btn btn-outline-primary"><i class="fa fa-globe"></i>VIEW</a></p>-->
-                      </div>
-                    </div>
-                  </div>
-                <div data-category="other" class="reference-item col-lg-3 col-md-6">
-                    <div class="reference"><a href="#"><img src="img/digit.png" alt="" class="img-fluid">
-                        <div class="overlay">
-                          <div class="inner">
-                            <h3 class="h4 reference-title">Hand Written Digit Recognition</h3>
-                           
-                          </div>
-                        </div></a>
-                      <div data-images="img/digit.png" class="sr-only reference-description">
-                          <P><CENTER>Jan 20 to Feb 20 </CENTER></P>
-                        <p>Developed a different DL Models to recognise the hand written digits. </p>
-                        <!--<p class="buttons text-center"><a href="https://github.com/chythu03/Asset-Management-System" target="_blank" class="btn btn-outline-primary"><i class="fa fa-globe"></i>VIEW</a></p>-->
-                      </div>
-                    </div>
-                  </div>
-            </div>
-          </div>
-        </div>
-      </div>
-    </section>
-    <!-- Customers-->
-    <section id="experience" class="bg-gradient services-section">
-      <div class="container">
-        <header class="text-center">
-          <h2 data-animate="fadeInDown" class="title">Experience</h2>
-        </header>
-        <div class="row services text-center">
-          <div data-animate="fadeInUp" class="col-lg-12">
-            <img src="img/ibm.png" width="280" height="110" class="rounded img-fluid" alt="Cinque Terre">
-            <h3 class="heading mb-3 text-400">Internship</h3>
-            <p class="text-left description"><center>Working as an intern in <b>IBM India Pvt Ltd., Banglore</b> starting from January and got hands-on experience with different problems in the field of Data Science, developed an Contract analysis tool and at present working on building chatbot on covid19</center></p>
-          </div>
-        </div>
-      </div>
-    </section>
-    <!-- Contact-->
-    <section id="contact" data-animate="bounceIn" class="contact-section contact">
-      <div class="container">
-        <header class="text-center">
-          <h2 class="title">Contact me</h2>
-        </header>
-
-        <div class="row">
-          <div class="col-lg-6 col-md-6 col-sm-6 col-xs-12"><br><p><iframe class="map" src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3825.0062960421315!2d80.6258552144822!3d16.525779788600385!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3a35eff73865144d%3A0xd2cc5f842fca754c!2sFuturepath%20E.%20M.%20High%20School!5e0!3m2!1sen!2sin!4v1589014421530!5m2!1sen!2sin" style="width:100%;height:400px;align-content: center" frameborder="0" style="border:0;" allowfullscreen="" aria-hidden="false" tabindex="0"></iframe></p> </div>
-          <div class="col-lg-6 col-md-6 col-sm-6 col-xs-12">
-            <div class="col-lg-8 mx-auto">
-              <form id="contact-form" method="post" action="">
-                <div class="messages"></div>
-                <div class="controls">
-                  <br><br><br><br><br>
-                  <div class="row">
-
-                    <div class="col-12">
-                        <center><i class="fa fa-mobile" style="font-size:39px"></i>&ensp; &nbsp;+91 9550768687 | 9660589582</center>
-                    </div><br>
-                    <div class="col-md-12">
-                        <center><i class="fa fa-envelope-o" style="font-size:36px"></i>&ensp; Mamidil.Sai@st.niituniversity.in </center>                 
-                    </div><br>
-                    <div class="col-md-12">
-                        <center><i class="fa fa-home" style="font-size:36px"></i>&ensp;Kedareswara Pet, Vijayawada, AP, 520003  </center>                
-                    </div>
-                  
-                  
-                  </div>
-                </div>
-              </form>
-            </div>
-          </div>
-        </div>
-      </div>
-    </section>
-    <!-- Map-->
+<!-- Skills Section -->
+<section class="py-5" id="skills">
+    <div class="container">
+        <h3 class="text-start text-brand">SKILLS</h3>
+        <ul class="list-unstyled row g-3">
+            <li class="col-12 col-md-3">
+                <div class="card-body p-3 rounded border-0 shadow flex-column w-100 h-100 bg-body">
+                    <div class="flex-column justify-content-between h-100">
+                        <h5 class="fw-normal mb-3">Languages / Databases</h5>
+                        <div role="button" class="d-flex flex-wrap align-items-center my-2 bgc-secondary-l4 bgc-h-secondary-l3 radius-1 p-25 d-style">
+                            <span class="mr-25 w-4 h-4 overflow-hidden text-center border-1 brc-secondary-m2 radius-round shadow-sm d-zoom-2">
+                                <img alt="Alexa's avatar" src="./images/python.svg" class="h-4 w-4" />
+                            </span>
     
-    <footer class="main-footer">
-      <div class="container">
-        <div class="row">
-          <div class="col-lg-6 col-md-6 col-sm-6 col-xs-12 text-center text-lg-left">
-            <p class="social"><a href="https://www.facebook.com/lokesh.mamidi.92" class="external facebook wow fadeInUp"><i class="fa fa-facebook"></i></a><a href="https://www.instagram.com/mamidilokesh/" data-wow-delay="0.2s" class="external instagram wow fadeInUp"><i class="fa fa-instagram"></i></a><a href="https://github.com/lokesh-venkata-sai" data-wow-delay="0.4s" class="external gplus wow fadeInUp"><i class="fa fa-github"></i></a><a href="https://www.linkedin.com/in/lokesh-mamidi-8aa229130" data-wow-delay="0.6s" class="email wow fadeInUp"><i class="fa fa-linkedin"></i></a></p>
-          </div>
-          <!-- /.6-->
-          
-          <div class="col-lg-6 col-md-6 col-sm-6 col-xs-12">
-              <p class="template-bootstrapious">© Designed by <font font color="red"><b> Mamidi Lokesh </b> </font> - Student at NIIT University</p>
-            <!-- Please do not remove the backlink to us unless you support further theme's development at https://bootstrapious.com/donate. It is part of the license conditions. Thank you for understanding :)-->
-          </div>
-        </div>
+                            <span class="text-default-d3 text-90 text-600">
+                                Python
+                            </span>
+                        </div>
+                        <div role="button" class="d-flex flex-wrap align-items-center my-2 bgc-secondary-l4 bgc-h-secondary-l3 radius-1 p-25 d-style">
+                            <span class="mr-25 w-4 h-4 overflow-hidden text-center border-1 brc-secondary-m2 radius-round shadow-sm d-zoom-2">
+                                <img alt="Alexa's avatar" src="./images/java.svg" class="h-4 w-4" />
+                            </span>
+    
+                            <span class="text-default-d3 text-90 text-600">
+                                Java
+                            </span>
+                        </div>
+                        <div role="button" class="d-flex flex-wrap align-items-center my-2 bgc-secondary-l4 bgc-h-secondary-l3 radius-1 p-25 d-style">
+                            <span class="mr-25 w-4 h-4 overflow-hidden text-center border-1 brc-secondary-m2 radius-round shadow-sm d-zoom-2">
+                                <img alt="Alexa's avatar" src="./images/c.png" class="h-4 w-4" />
+                            </span>
+    
+                            <span class="text-default-d3 text-90 text-600">
+                                C
+                            </span>
+                        </div>
+                        <div role="button" class="d-flex flex-wrap align-items-center my-2 bgc-secondary-l4 bgc-h-secondary-l3 radius-1 p-25 d-style">
+                            <span class="mr-25 w-4 h-4 overflow-hidden text-center border-1 brc-secondary-m2 radius-round shadow-sm d-zoom-2">
+                                <img alt="Alexa's avatar" src="./images/mysql.svg" class="h-4 w-4" />
+                            </span>
+    
+                            <span class="text-default-d3 text-90 text-600">
+                                MySQL, PostgreSQL
+                            </span>
+                        </div>
+                        <div role="button" class="d-flex flex-wrap align-items-center my-2 bgc-secondary-l4 bgc-h-secondary-l3 radius-1 p-25 d-style">
+                            <span class="mr-25 w-4 h-4 overflow-hidden text-center border-1 brc-secondary-m2 radius-round shadow-sm d-zoom-2">
+                                <img alt="Alexa's avatar" src="./images/mongodb.svg" class="h-4 w-4" />
+                            </span>
+    
+                            <span class="text-default-d3 text-90 text-600">
+                                NoSQL (MongoDB)
+                            </span>
+                        </div>                        
+                    </div>
+            </li>
+            <li class="col-12 col-md-3">
+                <div class="card-body p-3 rounded border-0 shadow flex-column w-100 h-100 bg-body">
+                    <div class="flex-column justify-content-between h-100">
+                        <h5 class="fw-normal mb-3">Tools / Software</h5>
+                        <div role="button" class="d-flex flex-wrap align-items-center my-2 bgc-secondary-l4 bgc-h-secondary-l3 radius-1 p-25 d-style">
+                            <span class="mr-25 w-4 h-4 overflow-hidden text-center border-1 brc-secondary-m2 radius-round shadow-sm d-zoom-2">
+                                <img alt="Alexa's avatar" src="./images/github.png" class="h-4 w-4" />
+                            </span>
+    
+                            <span class="text-default-d3 text-90 text-600">
+                                Github, BitBucket
+                            </span>
+                        </div>
+                        <div role="button" class="d-flex flex-wrap align-items-center my-2 bgc-secondary-l4 bgc-h-secondary-l3 radius-1 p-25 d-style">
+                            <span class="mr-25 w-4 h-4 overflow-hidden text-center border-1 brc-secondary-m2 radius-round shadow-sm d-zoom-2">
+                                <img alt="Alexa's avatar" src="./images/tableau.svg" class="h-4 w-4" />
+                            </span>
+    
+                            <span class="text-default-d3 text-90 text-600">
+                                Tableau, Power BI
+                            </span>
+                        </div>
+                        <div role="button" class="d-flex flex-wrap align-items-center my-2 bgc-secondary-l4 bgc-h-secondary-l3 radius-1 p-25 d-style">
+                            <span class="mr-25 w-4 h-4 overflow-hidden text-center border-1 brc-secondary-m2 radius-round shadow-sm d-zoom-2">
+                                <img alt="Alexa's avatar" src="./images/jenkins.png" class="h-4 w-4" />
+                            </span>
+    
+                            <span class="text-default-d3 text-90 text-600">
+                                Jenkins
+                            </span>
+                        </div>
+                        <div role="button" class="d-flex flex-wrap align-items-center my-2 bgc-secondary-l4 bgc-h-secondary-l3 radius-1 p-25 d-style">
+                            <span class="mr-25 w-4 h-4 overflow-hidden text-center border-1 brc-secondary-m2 radius-round shadow-sm d-zoom-2">
+                                <img alt="Alexa's avatar" src="./images/docker.png" class="h-4 w-4" />
+                            </span>
+    
+                            <span class="text-default-d3 text-90 text-600">
+                                Docker
+                            </span>
+                        </div>
+                        <div role="button" class="d-flex flex-wrap align-items-center my-2 bgc-secondary-l4 bgc-h-secondary-l3 radius-1 p-25 d-style">
+                            <span class="mr-25 w-4 h-4 overflow-hidden text-center border-1 brc-secondary-m2 radius-round shadow-sm d-zoom-2">
+                                <img alt="Alexa's avatar" src="./images/Jira.svg" class="h-4 w-4" />
+                            </span>
+    
+                            <span class="text-default-d3 text-90 text-600">
+                                Jira, Confluence
+                            </span>
+                        </div>
+                        <div role="button" class="d-flex flex-wrap align-items-center my-2 bgc-secondary-l4 bgc-h-secondary-l3 radius-1 p-25 d-style">
+                            <span class="mr-25 w-4 h-4 overflow-hidden text-center border-1 brc-secondary-m2 radius-round shadow-sm d-zoom-2">
+                                <img alt="Alexa's avatar" src="./images/eclipse.png" class="h-4 w-4" />
+                            </span>
+    
+                            <span class="text-default-d3 text-90 text-600">
+                                Pycharm, Eclipse, Jupyter
+                            </span>
+                        </div>            
+                    </div>
+            </li>
+            <li class="col-12 col-md-3">
+                <div class="card-body p-3 rounded border-0 shadow flex-column w-100 h-100 bg-body">
+                    <div class="flex-column justify-content-between h-100">
+                        <h5 class="fw-normal mb-3">Frameworks / Packages</h5>
+                        <div role="button" class="d-flex flex-wrap align-items-center my-2 bgc-secondary-l4 bgc-h-secondary-l3 radius-1 p-25 d-style">
+                                <span class="mr-25 w-4 h-4 overflow-hidden text-center border-1 brc-secondary-m2 radius-round shadow-sm d-zoom-2">
+                                    <img alt="Alexa's avatar" src="./images/spark.png" class="h-4 w-4" />
+                                </span>
+        
+                                <span class="text-default-d3 text-90 text-600">
+                                    Pyspark, Spark SQL
+                                </span>
+                            </div>
+                            <div role="button" class="d-flex flex-wrap align-items-center my-2 bgc-secondary-l4 bgc-h-secondary-l3 radius-1 p-25 d-style">
+                                <span class="mr-25 w-4 h-4 overflow-hidden text-center border-1 brc-secondary-m2 radius-round shadow-sm d-zoom-2">
+                                    <img alt="Alexa's avatar" src="./images/django.jpg" class="h-4 w-4" />
+                                </span>
+        
+                                <span class="text-default-d3 text-90 text-600">
+                                    Django, Flask
+                                </span>
+                            </div>
+                            <div role="button" class="d-flex flex-wrap align-items-center my-2 bgc-secondary-l4 bgc-h-secondary-l3 radius-1 p-25 d-style">
+                                <span class="mr-25 w-4 h-4 overflow-hidden text-center border-1 brc-secondary-m2 radius-round shadow-sm d-zoom-2">
+                                    <img alt="Alexa's avatar" src="./images/dask.png" class="h-4 w-4" />
+                                </span>
+        
+                                <span class="text-default-d3 text-90 text-600">
+                                    DASK
+                                </span>
+                            </div>
+                            <div role="button" class="d-flex flex-wrap align-items-center my-2 bgc-secondary-l4 bgc-h-secondary-l3 radius-1 p-25 d-style">
+                                <span class="mr-25 w-4 h-4 overflow-hidden text-center border-1 brc-secondary-m2 radius-round shadow-sm d-zoom-2">
+                                    <img alt="Alexa's avatar" src="./images/tensorflow.png" class="h-4 w-4" />
+                                </span>
+        
+                                <span class="text-default-d3 text-90 text-600">
+                                    TensorFlow, Keras
+                                </span>
+                            </div>
+                            <div role="button" class="d-flex flex-wrap align-items-center my-2 bgc-secondary-l4 bgc-h-secondary-l3 radius-1 p-25 d-style">
+                                <span class="mr-25 w-4 h-4 overflow-hidden text-center border-1 brc-secondary-m2 radius-round shadow-sm d-zoom-2">
+                                    <img alt="Alexa's avatar" src="./images/pandas.png" class="h-4 w-4" />
+                                </span>
+        
+                                <span class="text-default-d3 text-90 text-600">
+                                    Pandas, NumPy
+                                </span>
+                            </div>
+                            <div role="button" class="d-flex flex-wrap align-items-center my-2 bgc-secondary-l4 bgc-h-secondary-l3 radius-1 p-25 d-style">
+                                <span class="mr-25 w-4 h-4 overflow-hidden text-center border-1 brc-secondary-m2 radius-round shadow-sm d-zoom-2">
+                                    <img alt="Alexa's avatar" src="./images/ML.svg" class="h-4 w-4" />
+                                </span>
+        
+                                <span class="text-default-d3 text-90 text-600">
+                                    Sklearn, NLTK, Matplotlib
+                                </span>
+                            </div>
+                            <div role="button" class="d-flex flex-wrap align-items-center my-2 bgc-secondary-l4 bgc-h-secondary-l3 radius-1 p-25 d-style">
+                                <span class="mr-25 w-4 h-4 overflow-hidden text-center border-1 brc-secondary-m2 radius-round shadow-sm d-zoom-2">
+                                    <img alt="Alexa's avatar" src="./images/spring.svg" class="h-4 w-4" />
+                                </span>
+        
+                                <span class="text-default-d3 text-90 text-600">
+                                    Spring Boot, MVC, Servlets
+                                </span>
+                            </div>                      
+                    </div>
+            </li>
+            <li class="col-12 col-md-3">
+                <div class="card-body p-3 rounded border-0 shadow flex-column w-100 h-100 bg-body">
+                    <div class="flex-column justify-content-between h-100">
+                        <h5 class="fw-normal mb-3">Data Science / Algorithms</h5>
+                        <div role="button" class="d-flex flex-wrap align-items-center my-2 bgc-secondary-l4 bgc-h-secondary-l3 radius-1 p-25 d-style">
+                            <span class="mr-25 w-4 h-4 overflow-hidden text-center border-1 brc-secondary-m2 radius-round shadow-sm d-zoom-2">
+                                <img alt="Alexa's avatar" src="./images/ML.svg" class="h-4 w-4" />
+                            </span>
+    
+                            <span class="text-default-d3 text-90 text-600">
+                                Machine Learning
+                            </span>
+                        </div>
+                        <div role="button" class="d-flex flex-wrap align-items-center my-2 bgc-secondary-l4 bgc-h-secondary-l3 radius-1 p-25 d-style">
+                            <span class="mr-25 w-4 h-4 overflow-hidden text-center border-1 brc-secondary-m2 radius-round shadow-sm d-zoom-2">
+                                <img alt="Alexa's avatar" src="./images/dl.png" class="h-4 w-4" />
+                            </span>
+    
+                            <span class="text-default-d3 text-90 text-600">
+                                Deep Learning
+                            </span>
+                        </div>
+                        <div role="button" class="d-flex flex-wrap align-items-center my-2 bgc-secondary-l4 bgc-h-secondary-l3 radius-1 p-25 d-style">
+                            <span class="mr-25 w-4 h-4 overflow-hidden text-center border-1 brc-secondary-m2 radius-round shadow-sm d-zoom-2">
+                                <img alt="Alexa's avatar" src="./images/nlp.png" class="h-4 w-4" />
+                            </span>
+    
+                            <span class="text-default-d3 text-90 text-600">
+                                NLP
+                            </span>
+                        </div>
+                        <div role="button" class="d-flex flex-wrap align-items-center my-2 bgc-secondary-l4 bgc-h-secondary-l3 radius-1 p-25 d-style">
+                            <span class="mr-25 w-4 h-4 overflow-hidden text-center border-1 brc-secondary-m2 radius-round shadow-sm d-zoom-2">
+                                <img alt="Alexa's avatar" src="./images/stat.svg" class="h-4 w-4" />
+                            </span>
+    
+                            <span class="text-default-d3 text-90 text-600">
+                                Statistics
+                            </span>
+                        </div>
+                        <div role="button" class="d-flex flex-wrap align-items-center my-2 bgc-secondary-l4 bgc-h-secondary-l3 radius-1 p-25 d-style">
+                            <span class="mr-25 w-4 h-4 overflow-hidden text-center border-1 brc-secondary-m2 radius-round shadow-sm d-zoom-2">
+                                <img alt="Alexa's avatar" src="./images/data.png" class="h-4 w-4" />
+                            </span>
+    
+                            <span class="text-default-d3 text-90 text-600">
+                                Data preprocessing
+                            </span>
+                        </div>
+                        <div role="button" class="d-flex flex-wrap align-items-center my-2 bgc-secondary-l4 bgc-h-secondary-l3 radius-1 p-25 d-style">
+                            <span class="mr-25 w-4 h-4 overflow-hidden text-center border-1 brc-secondary-m2 radius-round shadow-sm d-zoom-2">
+                                <img alt="Alexa's avatar" src="./images/data.png" class="h-4 w-4" />
+                            </span>
+    
+                            <span class="text-default-d3 text-90 text-600">
+                                Data Mining, Analytics
+                            </span>
+                        </div>                  
+                    </div>
+            </li>
+        </ul>
+        <ul class="list-unstyled row g-3">
+            <li class="col-12 col-md-3">
+                <div class="card-body  p-3 rounded border-0 shadow flex-column w-100 h-100 bg-body">
+                    <div class="flex-column justify-content-between h-100">
+                        <h5 class="fw-normal mb-3">Web Technologies</h5>
+                        <div role="button" class="d-flex flex-wrap align-items-center my-2 bgc-secondary-l4 bgc-h-secondary-l3 radius-1 p-25 d-style">
+                            <span class="mr-25 w-4 h-4 overflow-hidden text-center border-1 brc-secondary-m2 radius-round shadow-sm d-zoom-2">
+                                <img alt="Alexa's avatar" src="./images/bootstrap.svg" class="h-4 w-4" />
+                            </span>
+    
+                            <span class="text-default-d3 text-90 text-600">
+                                HTML, CSS, Bootstrap
+                            </span>
+                        </div>
+                        <div role="button" class="d-flex flex-wrap align-items-center my-2 bgc-secondary-l4 bgc-h-secondary-l3 radius-1 p-25 d-style">
+                            <span class="mr-25 w-4 h-4 overflow-hidden text-center border-1 brc-secondary-m2 radius-round shadow-sm d-zoom-2">
+                                <img alt="Alexa's avatar" src="./images/js.svg" class="h-4 w-4" />
+                            </span>
+    
+                            <span class="text-default-d3 text-90 text-600">
+                                javascript
+                            </span>
+                        </div>
+                        <div role="button" class="d-flex flex-wrap align-items-center my-2 bgc-secondary-l4 bgc-h-secondary-l3 radius-1 p-25 d-style">
+                            <span class="mr-25 w-4 h-4 overflow-hidden text-center border-1 brc-secondary-m2 radius-round shadow-sm d-zoom-2">
+                                <img alt="Alexa's avatar" src="./images/angular.svg" class="h-4 w-4" />
+                            </span>
+    
+                            <span class="text-default-d3 text-90 text-600">
+                                Angular
+                            </span>
+                        </div>
+                        <div role="button" class="d-flex flex-wrap align-items-center my-2 bgc-secondary-l4 bgc-h-secondary-l3 radius-1 p-25 d-style">
+                            <span class="mr-25 w-4 h-4 overflow-hidden text-center border-1 brc-secondary-m2 radius-round shadow-sm d-zoom-2">
+                                <img alt="Alexa's avatar" src="./images/rest.png" class="h-4 w-4" />
+                            </span>
+    
+                            <span class="text-default-d3 text-90 text-600">
+                                REST API
+                            </span>
+                        </div>                    
+                    </div>
+            </li>
+            <li class="col-12 col-md-3">
+                <div class="card-body p-3 rounded border-0 shadow flex-column w-100 h-100 bg-body">
+                    <div class="flex-column justify-content-between h-100">
+                        <h5 class="fw-normal mb-3">Cloud</h5>
+                        <div role="button" class="d-flex flex-wrap align-items-center my-2 bgc-secondary-l4 bgc-h-secondary-l3 radius-1 p-25 d-style">
+                            <span class="mr-25 w-4 h-4 overflow-hidden text-center border-1 brc-secondary-m2 radius-round shadow-sm d-zoom-2">
+                                <img alt="Alexa's avatar" src="./images/aws.png" class="h-4 w-4" />
+                            </span>
+    
+                            <span class="text-default-d3 text-90 text-600">
+                                Amazon Web Services
+                            </span>
+                        </div>
+                        <div role="button" class="d-flex flex-wrap align-items-center my-2 bgc-secondary-l4 bgc-h-secondary-l3 radius-1 p-25 d-style">
+                            <span class="mr-25 w-4 h-4 overflow-hidden text-center border-1 brc-secondary-m2 radius-round shadow-sm d-zoom-2">
+                                <img alt="Alexa's avatar" src="./images/azure.png" class="h-4 w-4" />
+                            </span>
+    
+                            <span class="text-default-d3 text-90 text-600">
+                                Azure Fundamentals
+                            </span>
+                        </div>
+                        <div role="button" class="d-flex flex-wrap align-items-center my-2 bgc-secondary-l4 bgc-h-secondary-l3 radius-1 p-25 d-style">
+                            <span class="mr-25 w-4 h-4 overflow-hidden text-center border-1 brc-secondary-m2 radius-round shadow-sm d-zoom-2">
+                                <img alt="Alexa's avatar" src="./images/sagemaker.png" class="h-4 w-4" />
+                            </span>
+    
+                            <span class="text-default-d3 text-90 text-600">
+                                Sagemaker
+                            </span>
+                        </div>       
+                    </div>
+            </li>
+            <li class="col-12 col-md-3">
+                <div class="card-body p-3 rounded border-0 shadow flex-column w-100 h-100 bg-body">
+                    <div class="flex-column justify-content-between h-100">
+                        <h5 class="fw-normal mb-3">Other Skills</h5>
+                        <div role="button" class="d-flex flex-wrap align-items-center my-2 bgc-secondary-l4 bgc-h-secondary-l3 radius-1 p-25 d-style">
+                            <span class="mr-25 w-4 h-4 overflow-hidden text-center border-1 brc-secondary-m2 radius-round shadow-sm d-zoom-2">
+                                <img alt="Alexa's avatar" src="./images/agile.png" class="h-4 w-4" />
+                            </span>
+    
+                            <span class="text-default-d3 text-90 text-600">
+                                Agile Methodology
+                            </span>
+                        </div>
+                        <div role="button" class="d-flex flex-wrap align-items-center my-2 bgc-secondary-l4 bgc-h-secondary-l3 radius-1 p-25 d-style">
+                            <span class="mr-25 w-4 h-4 overflow-hidden text-center border-1 brc-secondary-m2 radius-round shadow-sm d-zoom-2">
+                                <img alt="Alexa's avatar" src="./images/code.webp" class="h-4 w-4" />
+                            </span>
+    
+                            <span class="text-default-d3 text-90 text-600">
+                                OOPS concepts
+                            </span>
+                        </div>
+                        <div role="button" class="d-flex flex-wrap align-items-center my-2 bgc-secondary-l4 bgc-h-secondary-l3 radius-1 p-25 d-style">
+                            <span class="mr-25 w-4 h-4 overflow-hidden text-center border-1 brc-secondary-m2 radius-round shadow-sm d-zoom-2">
+                                <img alt="Alexa's avatar" src="./images/ds.png" class="h-4 w-4" />
+                            </span>
+    
+                            <span class="text-default-d3 text-90 text-600">
+                                Data Structures
+                            </span>
+                        </div>
+                        <div role="button" class="d-flex flex-wrap align-items-center my-2 bgc-secondary-l4 bgc-h-secondary-l3 radius-1 p-25 d-style">
+                            <span class="mr-25 w-4 h-4 overflow-hidden text-center border-1 brc-secondary-m2 radius-round shadow-sm d-zoom-2">
+                                <img alt="Alexa's avatar" src="./images/code.webp" class="h-4 w-4" />
+                            </span>
+    
+                            <span class="text-default-d3 text-90 text-600">
+                                Algorithms
+                            </span>
+                        </div>
+                        <div role="button" class="d-flex flex-wrap align-items-center my-2 bgc-secondary-l4 bgc-h-secondary-l3 radius-1 p-25 d-style">
+                            <span class="mr-25 w-4 h-4 overflow-hidden text-center border-1 brc-secondary-m2 radius-round shadow-sm d-zoom-2">
+                                <img alt="Alexa's avatar" src="./images/debug.svg" class="h-4 w-4" />
+                            </span>
+    
+                            <span class="text-default-d3 text-90 text-600">
+                                Debugging, Testing
+                            </span>
+                        </div>                    
+                    </div>
+            </li>
+            <li class="col-12 col-md-3">
+                <div class="card p-3 rounded border-0 shadow flex-column w-100 h-100 bg-body">
+                    <div class="flex-column justify-content-between h-100">
+                        <h5 class="fw-normal mb-3">Other Tools / Technologies</h5>
+                        <div role="button" class="d-flex flex-wrap align-items-center my-2 bgc-secondary-l4 bgc-h-secondary-l3 radius-1 p-25 d-style">
+                            <span class="mr-25 w-4 h-4 overflow-hidden text-center border-1 brc-secondary-m2 radius-round shadow-sm d-zoom-2">
+                                <img alt="Alexa's avatar" src="./images/kube.png" class="h-4 w-4" />
+                            </span>
+    
+                            <span class="text-default-d3 text-90 text-600">
+                                Kubernetes
+                            </span>
+                        </div>
+                        <div role="button" class="d-flex flex-wrap align-items-center my-2 bgc-secondary-l4 bgc-h-secondary-l3 radius-1 p-25 d-style">
+                            <span class="mr-25 w-4 h-4 overflow-hidden text-center border-1 brc-secondary-m2 radius-round shadow-sm d-zoom-2">
+                                <img alt="Alexa's avatar" src="./images/rancher.svg" class="h-4 w-4" />
+                            </span>
+    
+                            <span class="text-default-d3 text-90 text-600">
+                                Rancher
+                            </span>
+                        </div>
+                        <div role="button" class="d-flex flex-wrap align-items-center my-2 bgc-secondary-l4 bgc-h-secondary-l3 radius-1 p-25 d-style">
+                            <span class="mr-25 w-4 h-4 overflow-hidden text-center border-1 brc-secondary-m2 radius-round shadow-sm d-zoom-2">
+                                <img alt="Alexa's avatar" src="./images/postman.svg" class="h-4 w-4" />
+                            </span>
+    
+                            <span class="text-default-d3 text-90 text-600">
+                                Postman
+                            </span>
+                        </div>
+                        <div role="button" class="d-flex flex-wrap align-items-center my-2 bgc-secondary-l4 bgc-h-secondary-l3 radius-1 p-25 d-style">
+                            <span class="mr-25 w-4 h-4 overflow-hidden text-center border-1 brc-secondary-m2 radius-round shadow-sm d-zoom-2">
+                                <img alt="Alexa's avatar" src="./images/ms.png" class="h-4 w-4" />
+                            </span>
+    
+                            <span class="text-default-d3 text-90 text-600">
+                                Microsoft Suite
+                            </span>
+                        </div>
+                        <div role="button" class="d-flex flex-wrap align-items-center my-2 bgc-secondary-l4 bgc-h-secondary-l3 radius-1 p-25 d-style">
+                            <span class="mr-25 w-4 h-4 overflow-hidden text-center border-1 brc-secondary-m2 radius-round shadow-sm d-zoom-2">
+                                <img alt="Alexa's avatar" src="./images/assist.png" class="h-4 w-4" />
+                            </span>
+    
+                            <span class="text-default-d3 text-90 text-600">
+                                IBM Watson Assistant
+                            </span>
+                        </div>              
+                    </div>
+            </li>
+        </ul>
+        <ul class="list-unstyled row g-3">
+            <li class="col-12 col-md-3">
+                <div class="card-body p-3 rounded border-0 shadow flex-column w-100 h-100 bg-body">
+                    <div class="flex-column justify-content-between h-100">
+                        <h5 class="fw-normal mb-3">Soft Skills</h5>
+                        <div role="button" class="d-flex flex-wrap align-items-center my-2 bgc-secondary-l4 bgc-h-secondary-l3 radius-1 p-25 d-style">
+                            <span class="mr-25 w-4 h-4 overflow-hidden text-center border-1 brc-secondary-m2 radius-round shadow-sm d-zoom-2">
+                                <img alt="Alexa's avatar" src="./images/soft.png" class="h-4 w-4" />
+                            </span>
+    
+                            <span class="text-default-d3 text-90 text-600">
+                                Communication
+                            </span>
+                        </div>
+                        <div role="button" class="d-flex flex-wrap align-items-center my-2 bgc-secondary-l4 bgc-h-secondary-l3 radius-1 p-25 d-style">
+                            <span class="mr-25 w-4 h-4 overflow-hidden text-center border-1 brc-secondary-m2 radius-round shadow-sm d-zoom-2">
+                                <img alt="Alexa's avatar" src="./images/soft.png" class="h-4 w-4" />
+                            </span>
+    
+                            <span class="text-default-d3 text-90 text-600">
+                                Team Work
+                            </span>
+                        </div>
+                        <div role="button" class="d-flex flex-wrap align-items-center my-2 bgc-secondary-l4 bgc-h-secondary-l3 radius-1 p-25 d-style">
+                            <span class="mr-25 w-4 h-4 overflow-hidden text-center border-1 brc-secondary-m2 radius-round shadow-sm d-zoom-2">
+                                <img alt="Alexa's avatar" src="./images/prob.png" class="h-4 w-4" />
+                            </span>
+    
+                            <span class="text-default-d3 text-90 text-600">
+                                Problem Solving
+                            </span>
+                        </div>
+                        <div role="button" class="d-flex flex-wrap align-items-center my-2 bgc-secondary-l4 bgc-h-secondary-l3 radius-1 p-25 d-style">
+                            <span class="mr-25 w-4 h-4 overflow-hidden text-center border-1 brc-secondary-m2 radius-round shadow-sm d-zoom-2">
+                                <img alt="Alexa's avatar" src="./images/time.svg" class="h-4 w-4" />
+                            </span>
+    
+                            <span class="text-default-d3 text-90 text-600">
+                                Time Management
+                            </span>
+                        </div>                    
+                    </div>
+            </li>
+        </ul>
+    </div>
+</section>
+
+<!-- Footer -->
+<footer class="bg-dark text-light text-center py-4" id="footer">
+  <div class="container">
+    <a href="#home" class="btn btn-outline-light"><i class="fa fa-arrow-up me-2"></i>To the top</a>
+    <div class="mt-3">
+      <a href="https://www.facebook.com/lokesh.mamidi.92" class="text-light me-3"><i class="fa fa-facebook-official"></i></a>
+      <a href="https://www.instagram.com/mamidilokesh/" class="text-light me-3"><i class="fa fa-instagram"></i></a>
+      <a href="https://github.com/lokesh-venkata-sai" class="text-light me-3"><i class="fa fa-github"></i></a>
+      <a href="https://www.linkedin.com/in/lokesh-mamidi-8aa229130" class="text-light me-3"><i class="fa fa-linkedin"></i></a>
+      <a href="mailto:lokeshmamidi252@gmail.com" class="text-light me-3"><i class="fa fa-envelope-o"></i></a>
+    </div>
+  </div>
+</footer>
+
+<!-- Modal for full size images on click-->
+<div class="modal fade" id="myModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+  <div class="modal-dialog modal-xl">
+    <div class="modal-content">
+      <div class="modal-header">
+        <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
       </div>
-    </footer>
-    <!-- JavaScript files-->
-    <script src="vendor/jquery/jquery.min.js"></script>
-    <script src="vendor/bootstrap/js/bootstrap.bundle.min.js"></script>
-    <script src="vendor/jquery.cookie/jquery.cookie.js"> </script>
-    <script src="vendor/owl.carousel/owl.carousel.min.js"></script>
-    <script src="vendor/waypoints/lib/jquery.waypoints.min.js"></script>
-    <script src="vendor/jquery.counterup/jquery.counterup.js"></script>
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/leaflet/1.4.0/leaflet.js"> </script>
-    <script src="js/front.js"></script>
-  </body>
+      <div class="modal-body">
+        <img src="" class="img-fluid" id="imagepreview" style="width: 100%;" alt="">
+      </div>
+    </div>
+  </div>
+</div>
+
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"></script>
+<script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+<script>
+$(document).ready(function(){
+  $('.img-fluid').click(function(){
+    var src = $(this).attr('src');
+    $('#myModal').on('show.bs.modal', function () {
+      $("#imagepreview").attr("src", src);
+    });
+    $('#myModal').modal('show');
+  });
+});
+</script>
+
+</body>
+<script>
+const toggleMore = document.getElementById("toggle-more");
+function setToggleContent() {
+  toggleMore.innerHTML =
+    toggleMore.ariaExpanded === "true"
+      ? `<span>View less</span>&nbsp;<i class="bi bi-caret-up"></i>`
+      : `<span>View more</span>&nbsp;<i class="bi bi-caret-down"></i>`;
+}
+
+function afterLoad() {
+  if (toggleMore) {
+    toggleMore.addEventListener("click", setToggleContent);
+  }
+}
+
+window.addEventListener("load", afterLoad);
+</script>
 </html>
